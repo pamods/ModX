@@ -1,0 +1,8 @@
+{
+  "ammo_demand": 200,
+  "base_spec": "/pa/tools/plasma/tx_pbomb.json",
+  "idle_aim_delay": 5,
+  "pitch_rate": 45,
+  "rate_of_fire": 0.4,
+  "yaw_rate": 45
+}

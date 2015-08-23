@@ -1,0 +1,106 @@
+{
+  "TEMP_texelinfo": 69.307,
+  "area_build_separation": 1,
+  "audio": {
+    "loops": {
+      "build": {
+        "cue": "/SE/Construction/Factory_contruction_loop_naval",
+        "flag": "build_target_changed",
+        "should_start_func": "has_build_target",
+        "should_stop_func": "no_build_target"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/sea/factory"
+    }
+  },
+  "base_spec": "/pa/units/generic/fac3.json",
+  "buildable_types": "Naval & FactoryBuild & Custom1 - NoBuild",
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_FactoryBuild",
+    "ORDER_Reclaim",
+    "ORDER_Repair",
+    "ORDER_Attack",
+    "ORDER_Assist"
+  ],
+  "description": "Advanced manufacturing: builds naval units.",
+  "display_name": "Tech 3 naval factory",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/sea"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Sea_large",
+      "effect_scale": 2.5
+    }
+  },
+  "factory_cooldown_time": 10,
+  "fx_offsets": [
+    {
+      "bone": "socket_muzzle01",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "type": "build"
+    },
+    {
+      "bone": "socket_muzzle02",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "type": "build"
+    },
+    {
+      "bone": "socket_muzzle03",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "type": "build"
+    },
+    {
+      "bone": "socket_muzzle04",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "type": "build"
+    }
+  ],
+  "max_health": 8000,
+  "mesh_bounds": [
+    30,
+    50,
+    15
+  ],
+  "model": {
+    "animations": {
+      "build_end": "/pa/units/sea/naval_factory_adv/naval_factory_adv_anim_end.papa",
+      "build_loop": "/pa/units/sea/naval_factory_adv/naval_factory_adv_anim_build.papa",
+      "build_start": "/pa/units/sea/naval_factory_adv/naval_factory_adv_anim_start.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/factory_anim_tree.json",
+    "filename": "/pa/units/sea/naval_factory_adv/naval_factory_adv.papa"
+  },
+  "placement_size": [
+    30,
+    80
+  ],
+  "rolloff_dirs": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      -1,
+      0
+    ]
+  ],
+  "spawn_layers": "WL_DeepWater",
+  "unit_types": [
+    "UNITTYPE_Important",
+    "UNITTYPE_Factory",
+    "UNITTYPE_Construction",
+    "UNITTYPE_Naval",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom1"
+  ],
+  "wait_to_rolloff_time": 0
+}

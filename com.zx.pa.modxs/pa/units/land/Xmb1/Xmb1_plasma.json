@@ -1,0 +1,6 @@
+{
+  "base_spec": "/pa/tools/plasma/tx_plasma.json",
+  "idle_aim_delay": 5,
+  "pitch_range": 30,
+  "rate_of_fire": 0.5
+}

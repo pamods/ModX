@@ -1,0 +1,50 @@
+{
+  "TEMP_texelinfo": 7,
+  "base_spec": "/pa/units/generic/airFA.json",
+  "build_metal_cost": 500,
+  "description": "Air superiority fighter: Equipped with anti-air machine guns.",
+  "display_name": "Wasp",
+  "fx_offsets": [
+    {
+      "bone": "engine01",
+      "filename": "/pa/effects/specs/jet_aircraft.pfx",
+      "type": "moving_forward"
+    },
+    {
+      "bone": "engine02",
+      "filename": "/pa/effects/specs/jet_aircraft.pfx",
+      "type": "moving_forward"
+    }
+  ],
+  "max_health": 100,
+  "mesh_bounds": [
+    6,
+    9,
+    2
+  ],
+  "model": {
+    "filename": "/pa/units/air/Afighter21/Afighter21.papa"
+  },
+  "physics": {
+    "radius": 5
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": [
+        "muzzle01",
+        "muzzle02"
+      ],
+      "spec_id": "/pa/units/air/Afighter21/Afighter21_bullet.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Fighter",
+    "UNITTYPE_Air",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Custom2"
+  ]
+}

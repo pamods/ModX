@@ -1,0 +1,147 @@
+{
+  "TEMP_texelinfo": 30,
+  "audio": {
+    "loops": {
+      "build": {
+        "cue": "/SE/Construction/Factory_contruction_loop_veh",
+        "flag": "build_target_changed",
+        "should_start_func": "has_build_target",
+        "should_stop_func": "no_build_target"
+      }
+    }
+  },
+  "base_spec": "/pa/units/generic/fac1.json",
+  "buildable_types": "Tank & (FactoryBuild & CombatFabBuild) & (Custom2 | Custom4)",
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_FactoryBuild",
+    "ORDER_Reclaim",
+    "ORDER_Repair",
+    "ORDER_Attack",
+    "ORDER_Assist",
+    "ORDER_Use"
+  ],
+  "death": {
+    "decals": [
+      "/pa/effects/specs/scorch_c_01.json"
+    ]
+  },
+  "description": "Builds amphibious vehicles.",
+  "display_name": "Amphibious vehicle factory",
+  "factory_cooldown_time": 3,
+  "fx_offsets": [
+    {
+      "bone": "arm01",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "offset": [
+        -1.6,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        0,
+        -90
+      ],
+      "type": "build"
+    },
+    {
+      "bone": "arm02",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "offset": [
+        -1.6,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        0,
+        -90
+      ],
+      "type": "build"
+    },
+    {
+      "bone": "arm03",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "offset": [
+        -1.6,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        0,
+        -90
+      ],
+      "type": "build"
+    }
+  ],
+  "mesh_bounds": [
+    18.4,
+    16,
+    5
+  ],
+  "model": {
+    "animations": {
+      "build_loop": "/pa/units/land/Sfamph11/Sfamph11_anim_build.papa"
+    },
+    "animtree": "/pa/units/land/Sfamph11/Sfamph11_at.json",
+    "filename": "/pa/units/land/Sfamph11/Sfamph11.papa",
+    "skirt_decal": "/pa/effects/specs/skirt_vehfac_basic.json"
+  },
+  "placement_size": [
+    20,
+    30
+  ],
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 24,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 24,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 24,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "rolloff_dirs": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      -1,
+      0
+    ]
+  ],
+  "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+  "unit_types": [
+    "UNITTYPE_Important",
+    "UNITTYPE_Factory",
+    "UNITTYPE_Construction",
+    "UNITTYPE_Land",
+    "UNITTYPE_Tank",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_Custom2"
+  ],
+  "wait_to_rolloff_time": 0
+}

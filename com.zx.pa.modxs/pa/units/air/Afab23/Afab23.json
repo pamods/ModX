@@ -1,0 +1,115 @@
+{
+  "TEMP_texelinfo": 7,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        3
+      ]
+    }
+  },
+  "base_spec": "/pa/units/generic/airE.json",
+  "build_metal_cost": 500,
+  "buildable_types": "((FabBuild & Factory & (Air | (Orbital & Land) | Nuke | NukeDefense)) | (FabBuild - Factory)) & Custom2 - Nobuild",
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Build",
+    "ORDER_Reclaim",
+    "ORDER_Repair",
+    "ORDER_Assist",
+    "ORDER_Use"
+  ],
+  "description": "Tech 2 fabricator: wired to build structures.",
+  "display_name": "Tech 3 fabrication aircraft",
+  "fx_offsets": [
+    {
+      "bone": "muzzle01",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "type": "build"
+    },
+    {
+      "bone": "muzzle02",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "type": "build"
+    },
+    {
+      "bone": "engine01",
+      "filename": "/pa/effects/specs/jet_aircraftH.pfx",
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "bone": "engine02",
+      "filename": "/pa/effects/specs/jet_aircraftH.pfx",
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "bone": "engine03",
+      "filename": "/pa/effects/specs/jet_aircraftNt.pfx",
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving_forward"
+    },
+    {
+      "bone": "engine04",
+      "filename": "/pa/effects/specs/jet_aircraftNt.pfx",
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving_forward"
+    }
+  ],
+  "max_health": 100,
+  "mesh_bounds": [
+    6,
+    6.8,
+    3
+  ],
+  "model": {
+    "animations": {
+      "fly": "/pa/units/air/Afab21/Afab21_anim_fly.papa"
+    },
+    "animtree": "/pa/anim/airfab.json",
+    "filename": "/pa/units/air/Afab23/Afab23.papa"
+  },
+  "navigation": {
+    "acceleration": 30,
+    "brake": 30,
+    "move_speed": 60
+  },
+  "physics": {
+    "radius": 4
+  },
+  "tools": [
+    {
+      "aim_bone": "turret00",
+      "spec_id": "/pa/units/air/Afab23/Afab23_build_arm.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Air",
+    "UNITTYPE_Fabber",
+    "UNITTYPE_Construction",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom2"
+  ]
+}

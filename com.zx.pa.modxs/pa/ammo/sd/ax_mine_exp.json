@@ -1,0 +1,12 @@
+{
+  "recon": {
+    "observable": {
+      "layer": "surface_and_air",
+      "sphere_radius": 1
+    }
+  },
+  "spawn_response": {
+    "audio_cue": "/SE/Impacts/missile_seeking",
+    "effect_spec": "/pa/effects/specs/imp_missile.pfx"
+  }
+}

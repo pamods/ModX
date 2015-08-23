@@ -1,0 +1,124 @@
+{
+  "TEMP_texelinfo": 30,
+  "atrophy_rate": 20,
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/radar"
+    }
+  },
+  "base_spec": "/pa/units/generic/strS.json",
+  "build_metal_cost": 2000,
+  "consumption": {
+    "energy": 400
+  },
+  "description": "Orbital radar.",
+  "display_name": "Orbital radar",
+  "energy_efficiency_requirement": 0.9,
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/radar"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/radar",
+      "effect_scale": 1.4,
+      "effect_spec": "/pa/effects/specs/exp_turret.pfx"
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "antenna01",
+      "filename": "/pa/units/orbital/SoradarA1/orbital_radar_basic_on.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "orientation": [
+        -90,
+        0,
+        0
+      ],
+      "type": "energy"
+    }
+  ],
+  "max_health": 2000,
+  "mesh_bounds": [
+    12,
+    12,
+    24
+  ],
+  "model": [
+    {
+      "animations": {
+        "end": "/pa/units/orbital/SoradarA1/orbital_radar_basic_end.papa",
+        "idle": "/pa/units/orbital/SoradarA1/orbital_radar_basic_closed.papa",
+        "loop": "/pa/units/orbital/SoradarA1/orbital_radar_basic_loop.papa",
+        "start": "/pa/units/orbital/SoradarA1/orbital_radar_basic_start.papa"
+      },
+      "animtree": "/pa/units/orbital/SoradarA1/SoradarA1_at.json",
+      "filename": "/pa/units/orbital/SoradarA1/orbital_radar_basic.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_basic_orbital_radar.json"
+    },
+    {
+      "animations": {
+        "end": "/pa/units/orbital/SoradarA1/orbital_radar_basic_end.papa",
+        "idle": "/pa/units/orbital/SoradarA1/orbital_radar_basic_closed.papa",
+        "loop": "/pa/units/orbital/SoradarA1/orbital_radar_basic_loop.papa",
+        "start": "/pa/units/orbital/SoradarA1/orbital_radar_basic_start.papa"
+      },
+      "animtree": "/pa/units/orbital/SoradarA1/SoradarA1_at.json",
+      "filename": "/pa/units/orbital/SoradarA1/orbital_radar_basic_sea.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "placement_size": [
+    14,
+    14
+  ],
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 120,
+          "shape": "capsule",
+          "uses_energy": false
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 24,
+          "shape": "capsule",
+          "uses_energy": false
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 24,
+          "shape": "capsule",
+          "uses_energy": false
+        },
+        {
+          "channel": "radar",
+          "layer": "orbital",
+          "radius": 600,
+          "shape": "sphere",
+          "uses_energy": true
+        }
+      ]
+    }
+  },
+  "unit_types": [
+    "UNITTYPE_Important",
+    "UNITTYPE_Orbital",
+    "UNITTYPE_Land",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Recon",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

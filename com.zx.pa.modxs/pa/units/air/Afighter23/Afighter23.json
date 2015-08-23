@@ -1,0 +1,79 @@
+{
+  "TEMP_texelinfo": 7.96209,
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/air/air_fighter_loop_advanced",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    }
+  },
+  "base_spec": "/pa/units/generic/airFI.json",
+  "build_metal_cost": 1000,
+  "description": "Interplanetary fighter: can travel beetween planets.",
+  "display_name": "Phoenix",
+  "fx_offsets": [
+    {
+      "filename": "/pa/effects/specs/jet_aircraft.pfx",
+      "offset": [
+        0.9,
+        4.35,
+        0.836
+      ],
+      "type": "moving_forward"
+    },
+    {
+      "filename": "/pa/effects/specs/jet_aircraft.pfx",
+      "offset": [
+        -0.9,
+        4.35,
+        0.836
+      ],
+      "type": "moving_forward"
+    }
+  ],
+  "gravwell_velocity_multiplier": 10,
+  "max_health": 100,
+  "mesh_bounds": [
+    9,
+    6.6,
+    3
+  ],
+  "model": {
+    "animations": {
+      "closed": "/pa/units/air/fighter_adv/fighter_adv_anim_closed.papa",
+      "deploy": "/pa/units/air/fighter_adv/fighter_adv_anim_deploy.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/fighter_adv_anim_tree.json",
+    "filename": "/pa/units/air/fighter_adv/fighter_adv.papa"
+  },
+  "navigation": {
+    "inter_planetary_type": "system"
+  },
+  "physics": {
+    "radius": 6
+  },
+  "system_velocity_multiplier": 10,
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": [
+        "socket_leftMuzzle",
+        "socket_rightMuzzle"
+      ],
+      "spec_id": "/pa/units/air/Afighter23/Afighter23_laser.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Fighter",
+    "UNITTYPE_Air",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom2"
+  ]
+}

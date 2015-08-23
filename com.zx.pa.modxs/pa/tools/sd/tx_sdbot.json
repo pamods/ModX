@@ -1,0 +1,12 @@
+{
+  "ammo_id": "/pa/ammo/sd/ax_sdbot.json",
+  "base_spec": "/pa/tools/sd/tx_mine.json",
+  "max_range": 10,
+  "no_busy_auto_attack": true,
+  "target_priorities": [
+    "Commander",
+    "Structure - Wall",
+    "Mobile - Air",
+    "Wall"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "TEMP_texelinfo": 5.32966,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        4
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/bot/assault_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/assault"
+    }
+  },
+  "base_spec": "/pa/units/generic/botA.json",
+  "build_metal_cost": 200,
+  "description": "Antitank bot.",
+  "display_name": "Slammer",
+  "events": {
+    "fired": {
+      "effect_spec": "/pa/effects/specs/fired_small.pfx socket_muzzle"
+    }
+  },
+  "max_health": 60,
+  "mesh_bounds": [
+    3.92,
+    4.92,
+    4
+  ],
+  "model": {
+    "animations": {
+      "aim_up": "/pa/units/land/bot_artillery_adv/bot_artillery_adv_anim_aimUp.papa",
+      "death01": "/pa/units/land/bot_artillery_adv/bot_artillery_adv_anim_death01.papa",
+      "walk": "/pa/units/land/bot_artillery_adv/bot_artillery_adv_anim_run.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/bot_artillery_adv_anim_tree.json",
+    "filename": "/pa/units/land/bot_artillery_adv/bot_artillery_adv.papa",
+    "walk_speed": 14
+  },
+  "physics": {
+    "radius": 3.5
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_turret",
+      "muzzle_bone": "socket_muzzle",
+      "spec_id": "/pa/units/land/Bsupport22/Bsupport22_shell.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Basic",
+    "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

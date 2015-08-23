@@ -1,0 +1,55 @@
+{
+  "TEMP_texelinfo": 9.4493,
+  "area_build_separation": 18,
+  "atrophy_rate": 10,
+  "base_spec": "/pa/units/generic/strT.json",
+  "build_metal_cost": 1000,
+  "command_caps": [
+    "ORDER_Attack"
+  ],
+  "description": "Basic turret: equipped with anti-air missiles.",
+  "display_name": "Galata turret",
+  "guard_layer": "WL_Air",
+  "guard_radius": 250,
+  "max_health": 400,
+  "mesh_bounds": [
+    5,
+    5,
+    9
+  ],
+  "model": [
+    {
+      "animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json",
+      "filename": "/pa/units/land/air_defense/air_defense.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_defense.json"
+    },
+    {
+      "animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json",
+      "filename": "/pa/units/sea/air_defense/air_defense.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "nearby_target_tick_update_interval": 1,
+  "tools": [
+    {
+      "aim_bone": "bone_pitch",
+      "muzzle_bone": [
+        "socket_rightMuzzle",
+        "socket_leftMuzzle"
+      ],
+      "spec_id": "/pa/units/land/SdaaA1/SdaaA1_missile.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Land",
+    "UNITTYPE_AirDefense",
+    "UNITTYPE_Defense",
+    "UNITTYPE_Basic",
+    "UNITTYPE_CmdBuild",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

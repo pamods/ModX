@@ -1,0 +1,13 @@
+{
+  "ammo_id": "/pa/ammo/generic/ax_none.json",
+  "auto_attack": false,
+  "auto_task_type": "none",
+  "max_range": 0,
+  "pitch_range": 0,
+  "pitch_rate": 0,
+  "rate_of_fire": 1,
+  "target_layers": [],
+  "tool_type": "TOOL_Weapon",
+  "yaw_range": 0,
+  "yaw_rate": 0
+}

@@ -1,0 +1,100 @@
+{
+  "TEMP_texelinfo": 8.37977,
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/sea/attack_sub_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    }
+  },
+  "base_spec": "/pa/units/generic/navS.json",
+  "build_metal_cost": 1000,
+  "description": "Submarine class: anti-sub and anti-ship torpedoes",
+  "display_name": "Barracuda",
+  "events": {
+    "died": {
+      "effect_scale": 1,
+      "effect_spec": "/pa/effects/specs/exp_naval_sub.pfx"
+    }
+  },
+  "fx_offsets": [
+    {
+      "filename": "/pa/effects/specs/jet_navalS_back.pfx",
+      "offset": [
+        0,
+        8.5,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "filename": "/pa/effects/specs/jet_navalL_front.pfx",
+      "offset": [
+        0,
+        -4.5,
+        2.5
+      ],
+      "type": "moving"
+    }
+  ],
+  "guard_layer": "WL_AnyWater",
+  "guard_radius": 200,
+  "max_health": 500,
+  "mesh_bounds": [
+    4,
+    15,
+    4
+  ],
+  "model": {
+    "filename": "/pa/units/sea/attack_sub/attack_sub.papa"
+  },
+  "physics": {
+    "push_class": 9,
+    "radius": 3
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 20,
+          "shape": "capsule"
+        },
+        {
+          "channel": "radar",
+          "layer": "underwater",
+          "radius": 100,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": "bone_root",
+      "spec_id": "/pa/units/sea/attack_sub/attack_sub_tool_weapon.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Naval",
+    "UNITTYPE_Sub",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

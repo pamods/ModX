@@ -1,0 +1,13 @@
+{
+  "ammo_id": "/pa/ammo/shell/ax_flak.json",
+  "base_spec": "/pa/tools/shell/tx_shell_.json",
+  "rate_of_fire": 0.5,
+  "target_layers": [
+    "WL_Air"
+  ],
+  "target_priorities": [
+    "Air & Bomber",
+    "Air & Gunship",
+    "Air & Mobile"
+  ]
+}

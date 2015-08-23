@@ -1,0 +1,7 @@
+{
+  "base_spec": "/pa/tools/build_arm/tx_factory.json",
+  "construction_demand": {
+    "energy": 1000,
+    "metal": 20
+  }
+}

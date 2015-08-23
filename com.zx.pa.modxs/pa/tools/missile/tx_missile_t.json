@@ -1,0 +1,14 @@
+{
+  "ammo_id": "/pa/ammo/missile/ax_missile_t.json",
+  "base_spec": "/pa/tools/missile/tx_missile.json",
+  "firing_arc_pitch": 180,
+  "firing_arc_yaw": 180,
+  "pitch_range": 0,
+  "spread_fire": true,
+  "target_priorities": [
+    "Mobile - Air",
+    "Structure - Wall",
+    "Wall"
+  ],
+  "yaw_range": 0
+}

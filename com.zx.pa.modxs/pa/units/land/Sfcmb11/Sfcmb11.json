@@ -1,0 +1,106 @@
+{
+  "TEMP_texelinfo": 20,
+  "audio": {
+    "loops": {
+      "build": {
+        "cue": "/SE/Construction/Factory_contruction_loop_bot",
+        "flag": "build_target_changed",
+        "should_start_func": "has_build_target",
+        "should_stop_func": "no_build_target"
+      }
+    }
+  },
+  "base_spec": "/pa/units/generic/fac1.json",
+  "buildable_types": "Bot & (FactoryBuild & CombatFabBuild) & (Custom1 | Custom3) - NoBuild",
+  "death": {
+    "decals": [
+      "/pa/effects/specs/scorch_b_01.json"
+    ]
+  },
+  "description": "Builds bots. Armed with railguns for self-defense.",
+  "display_name": "Combat bot factory",
+  "factory_cooldown_time": 2,
+  "fx_offsets": [
+    {
+      "bone": "muzzleA01",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "type": "build"
+    },
+    {
+      "bone": "muzzleB01",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "type": "build"
+    }
+  ],
+  "max_health": 1000,
+  "mesh_bounds": [
+    12,
+    12,
+    12
+  ],
+  "model": {
+    "animations": {
+      "build_end": "/pa/units/land/Sfcmb11/Sfcmb11_anim_end.papa",
+      "build_loop": "/pa/units/land/Sfcmb11/Sfcmb11_anim_build.papa",
+      "build_start": "/pa/units/land/Sfcmb11/Sfcmb11_anim_start.papa"
+    },
+    "animtree": "/pa/units/land/Sfcmb11/Sfcmb11_at.json",
+    "filename": "/pa/units/land/Sfcmb11/Sfcmb11.papa",
+    "skirt_decal": "/pa/effects/specs/skirt_energy.json"
+  },
+  "placement_size": [
+    20,
+    20
+  ],
+  "rolloff_dirs": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      -1,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      -1,
+      0,
+      0
+    ]
+  ],
+  "spawn_layers": "WL_LandHorizontal",
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "record_index": 0,
+      "spec_id": "/pa/tools/build_arm/tx_factory1.json"
+    },
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": [
+        "muzzleA00",
+        "muzzleB00"
+      ],
+      "record_index": 1,
+      "spec_id": "/pa/units/land/Sfcmb11/Sfcmb11_railgun.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Important",
+    "UNITTYPE_Factory",
+    "UNITTYPE_Construction",
+    "UNITTYPE_Land",
+    "UNITTYPE_Bot",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Custom1"
+  ],
+  "wait_to_rolloff_time": 0
+}

@@ -1,0 +1,22 @@
+{
+  "armor_damage_map": {
+    "AT_Naval": 2
+  },
+  "base_spec": "/pa/ammo/bomb/ax_bomb.json",
+  "events": {
+    "died": {
+      "audio_cue": "/SE/Impacts/torpedo"
+    }
+  },
+  "fx_trail": {
+    "filename": "/pa/effects/specs/proj_torpedo.pfx",
+    "offset": [
+      0,
+      0.8,
+      0
+    ]
+  },
+  "model": {
+    "filename": "/pa/units/sea/torpedo_small/torpedo_small.papa"
+  }
+}

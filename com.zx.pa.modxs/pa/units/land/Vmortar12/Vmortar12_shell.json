@@ -1,0 +1,5 @@
+{
+  "base_spec": "/pa/tools/shell/tx_mortar.json",
+  "idle_aim_delay": 5,
+  "rate_of_fire": 4
+}

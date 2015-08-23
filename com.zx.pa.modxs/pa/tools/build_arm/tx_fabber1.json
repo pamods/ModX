@@ -1,0 +1,8 @@
+{
+  "base_spec": "/pa/tools/build_arm/tx_fabber.json",
+  "construction_demand": {
+    "energy": 900,
+    "metal": 10
+  },
+  "max_range": 30
+}

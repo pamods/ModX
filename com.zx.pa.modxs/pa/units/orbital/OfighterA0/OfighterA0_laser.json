@@ -1,0 +1,17 @@
+{
+  "base_spec": "/pa/tools/laser/tx_laser.json",
+  "firing_arc_pitch": 30,
+  "firing_arc_yaw": 30,
+  "pitch_range": 0,
+  "pitch_rate": 0,
+  "target_layers": [
+    "WL_Orbital"
+  ],
+  "target_priorities": [
+    "Orbital & Bomber",
+    "Orbital & Fighter",
+    "Orbital"
+  ],
+  "yaw_range": 0,
+  "yaw_rate": 0
+}

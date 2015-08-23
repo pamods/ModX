@@ -1,0 +1,42 @@
+{
+  "base_spec": "/pa/ammo/bomb/ax_bomb.json",
+  "burn_damage": 10,
+  "burn_radius": 15,
+  "damage": 200,
+  "events": {
+    "died": {
+      "audio_cue": "/SE/Impacts/missile_seeking",
+      "effect_spec": "/pa/effects/specs/imp_missile.pfx"
+    },
+    "spawned": {
+      "audio_cue": "/SE/Weapons/air/bomber_T2_fire"
+    }
+  },
+  "full_damage_splash_radius": 5,
+  "fx_trail": {
+    "offset": [
+      0,
+      1,
+      0
+    ]
+  },
+  "impact_decals": [
+    "/pa/effects/specs/scorch_b_01.json"
+  ],
+  "model": {
+    "filename": "/pa/units/air/bomb_guided/bomb_guided.papa"
+  },
+  "splash_damage": 200,
+  "splash_radius": 15,
+  "stages": [
+    {
+      "apply_thrust": false,
+      "ignores_LOS": true,
+      "ignores_gravity": false,
+      "rotates_to_velocity": true,
+      "stage_duration": 50000,
+      "stage_turn_rate": 3
+    }
+  ],
+  "turn_rate": 3
+}

@@ -1,0 +1,15 @@
+{
+  "base_spec": "/pa/units/land/SfucA0/SfucA0.json",
+  "buildable_types": "Tank & FactoryBuild & Custom1 - NoBuild",
+  "display_name": "Vehicle 1 type unit cannon",
+  "unit_types": [
+    "UNITTYPE_Important",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Factory",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Tank"
+  ]
+}

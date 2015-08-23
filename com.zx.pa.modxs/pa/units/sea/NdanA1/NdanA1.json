@@ -1,0 +1,95 @@
+{
+  "TEMP_texelinfo": 10.4007,
+  "area_build_separation": 18,
+  "armor_type": "AT_Naval",
+  "atrophy_rate": 10,
+  "base_spec": "/pa/units/generic/strS.json",
+  "build_metal_cost": 1000,
+  "command_caps": [
+    "ORDER_Attack"
+  ],
+  "description": "Torpedo Launcher- Basic anti-ship defense.",
+  "display_name": "Torpedo Launcher",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/sea"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Sea"
+    }
+  },
+  "guard_layer": "WL_WaterSurface",
+  "guard_radius": 200,
+  "max_health": 600,
+  "mesh_bounds": [
+    9.6,
+    4.8,
+    4
+  ],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/sea/NdanA1/torpedo_launcher2_anim_idle.papa"
+    },
+    "animtree": "/pa/units/sea/NdanA1/NdanA1_at.json",
+    "filename": "/pa/units/sea/NdanA1/torpedo_launcher2.papa"
+  },
+  "recon": {
+    "observable": {
+      "layer": "underwater"
+    },
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 20,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 20,
+          "shape": "capsule"
+        },
+        {
+          "channel": "radar",
+          "layer": "mine",
+          "radius": 150,
+          "shape": "capsule"
+        },
+        {
+          "channel": "radar",
+          "layer": "underwater",
+          "radius": 150,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "spawn_layers": "WL_WaterSurface",
+  "tools": [
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": [
+        "muzzle01",
+        "muzzle02"
+      ],
+      "spec_id": "/pa/units/sea/NdanA1/NdanA1_torpedo.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Naval",
+    "UNITTYPE_Defense",
+    "UNITTYPE_CmdBuild",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_FabAdvBuild"
+  ]
+}

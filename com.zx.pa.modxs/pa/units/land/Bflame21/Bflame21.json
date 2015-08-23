@@ -1,0 +1,83 @@
+{
+  "TEMP_texelinfo": 4.07719,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        3.5
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/bot/assault_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/assault"
+    }
+  },
+  "base_spec": "/pa/units/generic/botA.json",
+  "build_metal_cost": 100,
+  "description": "Flame bot: Short ranged, deals heavy damage.",
+  "display_name": "Scorcher",
+  "events": {
+    "fired0": {
+      "audio_cue": "",
+      "effect_spec": "/pa/effects/specs/fired_flame_small.pfx socket_rightMuzzle"
+    },
+    "fired1": {
+      "audio_cue": "",
+      "effect_spec": "/pa/effects/specs/fired_flame_small.pfx socket_leftMuzzle"
+    }
+  },
+  "max_health": 60,
+  "mesh_bounds": [
+    5,
+    4,
+    4.5
+  ],
+  "model": {
+    "animations": {
+      "aim_down": "/pa/units/land/bot_artillery/bot_artillery_anim_aimDown.papa",
+      "aim_up": "/pa/units/land/bot_artillery/bot_artillery_anim_aimUp.papa",
+      "death01": "/pa/units/land/bot_artillery/bot_artillery_anim_death01.papa",
+      "walk": "/pa/units/land/bot_artillery/bot_artillery_anim_run.papa"
+    },
+    "animtree": "/pa/units/land/Bflame21/Bflame21_at.json",
+    "filename": "/pa/units/land/bot_artillery/bot_artillery.papa",
+    "walk_speed": 15
+  },
+  "physics": {
+    "radius": 3
+  },
+  "tools": [
+    {
+      "aim_bone": "socket_aim",
+      "fire_event": "fired0",
+      "muzzle_bone": "socket_rightMuzzle",
+      "spec_id": "/pa/units/land/Bflame21/Bflame21_flame.json"
+    },
+    {
+      "aim_bone": "socket_aim",
+      "fire_event": "fired1",
+      "muzzle_bone": "socket_leftMuzzle",
+      "spec_id": "/pa/units/land/Bflame21/Bflame21_flame.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Basic",
+    "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

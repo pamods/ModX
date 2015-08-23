@@ -1,0 +1,5 @@
+{
+  "ammo_demand": 1500,
+  "base_spec": "/pa/tools/missile/tx_tactical.json",
+  "rate_of_fire": 0.15
+}

@@ -1,0 +1,140 @@
+{
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        33
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/commander/Commander_move_loop_imperial"
+      }
+    }
+  },
+  "base_spec": "/pa/units/generic/super_.json",
+  "description": "Superunit, can be countered with tons of bots.",
+  "display_name": "Spartan",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/bot"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Bot",
+      "effect_scale": 2
+    },
+    "fired0": {
+      "effect_spec": "/pa/effects/specs/fired_small.pfx muzzle01"
+    },
+    "fired1": {
+      "effect_spec": "/pa/effects/specs/fired_small.pfx muzzle02"
+    }
+  },
+  "guard_layer": "WL_LandHorizontal",
+  "guard_radius": 200,
+  "influence_radius": 1000,
+  "max_health": 10000,
+  "mesh_bounds": [
+    17.6,
+    7,
+    70
+  ],
+  "model": {
+    "animations": {
+      "walk": "/pa/units/land/Xmb2/mb2_anim_walk.papa"
+    },
+    "animtree": "/pa/units/land/Xmb2/Xmb2_at.json",
+    "filename": "/pa/units/land/Xmb2/mb2.papa",
+    "walk_speed": 6
+  },
+  "navigation": {
+    "acceleration": 80,
+    "brake": 80,
+    "group_preference": "front",
+    "move_speed": 8,
+    "turn_speed": 180,
+    "type": "amphibious"
+  },
+  "physics": {
+    "radius": 6
+  },
+  "placement_size": [
+    16,
+    16
+  ],
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 160,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 160,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 32,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "tools": [
+    {
+      "aim_bone": "pitch01",
+      "fire_event": "fired0",
+      "muzzle_bone": "muzzle01",
+      "record_index": 0,
+      "spec_id": "/pa/units/land/Xmb2/Xmb2_ion.json"
+    },
+    {
+      "aim_bone": "pitch02",
+      "fire_event": "fired1",
+      "muzzle_bone": "muzzle02",
+      "record_index": 1,
+      "spec_id": "/pa/units/land/Xmb2/Xmb2_ion.json"
+    },
+    {
+      "aim_bone": "turret03",
+      "fire_event": "fired2",
+      "muzzle_bone": [
+        "muzzleA03",
+        "muzzleB03"
+      ],
+      "record_index": 2,
+      "spec_id": "/pa/units/land/Xmb2/Xmb2_missile.json"
+    },
+    {
+      "aim_bone": "turret04",
+      "fire_event": "fired3",
+      "muzzle_bone": [
+        "muzzleA04",
+        "muzzleB04"
+      ],
+      "record_index": 3,
+      "spec_id": "/pa/units/land/Xmb2/Xmb2_missile.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Heavy",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

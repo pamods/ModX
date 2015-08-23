@@ -1,0 +1,115 @@
+{
+  "TEMP_texelinfo": 5,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        1,
+        2.7
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/veh/tank_light_laser_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/veh/tank_light_laser"
+    }
+  },
+  "base_spec": "/pa/units/generic/veh.json",
+  "build_metal_cost": 500,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Assist",
+    "ORDER_Use"
+  ],
+  "description": "Mobile point defense system: destroys small tactical missiles. Amphibious.",
+  "display_name": "Point defense",
+  "headlights": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "far_distance": 25,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 1.4,
+      "near_distance": 1.4,
+      "near_height": 1.4,
+      "near_width": 1.8,
+      "offset": [
+        2.1,
+        -2.4,
+        1.35
+      ],
+      "orientation": [
+        0,
+        65,
+        0
+      ]
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "far_distance": 25,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 1.4,
+      "near_distance": 1.4,
+      "near_height": 1.4,
+      "near_width": 1.8,
+      "offset": [
+        -2.1,
+        -2.4,
+        1.35
+      ],
+      "orientation": [
+        0,
+        65,
+        0
+      ]
+    }
+  ],
+  "mesh_bounds": [
+    5.6,
+    5,
+    3
+  ],
+  "model": {
+    "filename": "/pa/units/land/Vpd22/Vpd22.papa"
+  },
+  "navigation": {
+    "type": "amphibious"
+  },
+  "physics": {
+    "radius": 4
+  },
+  "tools": [
+    {
+      "aim_bone": "muzzle00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/Vpd22/Vpd22_pd.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Tank",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Land",
+    "UNITTYPE_Defense",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_Custom2"
+  ]
+}

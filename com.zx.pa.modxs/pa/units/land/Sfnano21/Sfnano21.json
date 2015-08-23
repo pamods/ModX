@@ -1,0 +1,42 @@
+{
+  "TEMP_texelinfo": 15,
+  "base_spec": "/pa/units/generic/facN.json",
+  "buildable_types": "Bot & FactoryBuild & CannonBuildable",
+  "description": "Builds walking missiles. Autobuild on by default.",
+  "display_name": "Nanofactory",
+  "factory": {
+    "initial_build_spec": "/pa/units/land/Bnano31/Bnano31.json"
+  },
+  "mesh_bounds": [
+    11,
+    10,
+    6.5
+  ],
+  "model": [
+    {
+      "animations": {
+        "build_end": "/pa/units/land/Sfnano21/Sfnano21_anim_end.papa",
+        "build_loop": "/pa/units/land/Sfnano21/Sfnano21_anim_build.papa",
+        "build_start": "/pa/units/land/Sfnano21/Sfnano21_anim_start.papa"
+      },
+      "animtree": "/pa/anim/anim_trees/factory_anim_tree.json",
+      "filename": "/pa/units/land/Sfnano21/Sfnano21.papa",
+      "skirt_decal": "/pa/effects/specs/skirt_energy.json"
+    }
+  ],
+  "placement_size": [
+    12,
+    18
+  ],
+  "unit_types": [
+    "UNITTYPE_Important",
+    "UNITTYPE_Land",
+    "UNITTYPE_Bot",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Factory",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Custom2"
+  ]
+}

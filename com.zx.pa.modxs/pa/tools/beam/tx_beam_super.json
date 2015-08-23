@@ -1,0 +1,12 @@
+{
+  "ammo_id": "/pa/ammo/beam/ax_beam_super.json",
+  "base_spec": "/pa/tools/generic/tx_base.json",
+  "max_range": 160,
+  "rate_of_fire": 10,
+  "target_priorities": [
+    "Structure & SurfaceDefense",
+    "Mobile",
+    "Structure - Wall",
+    "Wall"
+  ]
+}

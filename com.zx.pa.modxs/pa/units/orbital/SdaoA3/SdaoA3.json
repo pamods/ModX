@@ -1,0 +1,122 @@
+{
+  "TEMP_texelinfo": 32.1806,
+  "area_build_separation": 100,
+  "area_build_type": "Sphere",
+  "atrophy_rate": 50,
+  "base_spec": "/pa/units/generic/strS.json",
+  "build_metal_cost": 5000,
+  "command_caps": [
+    "ORDER_Attack"
+  ],
+  "description": "Laser defense platform: designed to take out orbital units above it.",
+  "display_name": "Umbrella",
+  "events": {
+    "died": {
+      "effect_scale": 2
+    },
+    "fired0": {
+      "effect_spec": "/pa/effects/specs/exp_laser_small.pfx socket_muzzle01"
+    }
+  },
+  "guard_layer": "WL_Orbital",
+  "guard_radius": 250,
+  "lamps": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 5.75,
+      "offset": [
+        -8,
+        8,
+        4.22
+      ],
+      "radius": 5
+    },
+    {
+      "bone": "bone_pitch",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 2,
+      "offset": [
+        2.8,
+        -4.8,
+        0
+      ],
+      "radius": 8
+    },
+    {
+      "bone": "bone_pitch",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 2,
+      "offset": [
+        -2.8,
+        -4.8,
+        0
+      ],
+      "radius": 8
+    }
+  ],
+  "max_health": 3000,
+  "mesh_bounds": [
+    19,
+    20.6558,
+    15.4
+  ],
+  "model": [
+    {
+      "animtree": "/pa/anim/anim_trees/ion_defense_anim_tree.json",
+      "filename": "/pa/units/orbital/ion_defense/ion_defense.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_ion_defense.json"
+    },
+    {
+      "animtree": "/pa/anim/anim_trees/ion_defense_anim_tree.json",
+      "filename": "/pa/units/sea/ion_defense/ion_defense.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "placement_size": [
+    20,
+    20
+  ],
+  "show_in_orbital_layer": true,
+  "tools": [
+    {
+      "aim_bone": "bone_turret",
+      "fire_event": "fired0",
+      "muzzle_bone": "socket_muzzle01",
+      "record_index": 0,
+      "spec_id": "/pa/units/orbital/SdaoA3/SdaoA3_laser.json"
+    },
+    {
+      "aim_bone": "bone_turret",
+      "fire_event": "fired1",
+      "muzzle_bone": [
+        "socket_muzzle02",
+        "socket_muzzle03"
+      ],
+      "record_index": 1,
+      "spec_id": "/pa/units/orbital/SdaoA3/SdaoA3_ae.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_Defense",
+    "UNITTYPE_OrbitalDefense",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

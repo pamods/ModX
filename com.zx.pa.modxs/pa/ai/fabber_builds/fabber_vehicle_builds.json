@@ -1,0 +1,642 @@
+{
+  "build_list": [
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": false,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "string0": "VehFactory11",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory11",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "string0": "VehFactory11",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory11",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedVehicleFactory"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction & Tank & Basic - FabAdvBuild) - CombatFabAdvBuild - Orbital",
+            "value0": 1
+          },
+          {
+            "string0": "VehFactory11",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory11",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "UnableToExpand"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "compare0": "<=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction) - Orbital",
+            "value0": 0
+          },
+          {
+            "string0": "VehFactory11",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "CommanderVeh1",
+        "VehFabber11"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 5,
+      "min_num_assisters": 2,
+      "name": "Veh Factory 11",
+      "placement_rules": {
+        "buffer": 3,
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 376,
+      "shared_instance_count": "Tech1Factory",
+      "to_build": "VehFactory11"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": false,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "string0": "VehFactory12",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory12",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "string0": "VehFactory12",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory12",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedVehicleFactory"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction & Tank & Basic & FabAdvBuild) - Orbital",
+            "value0": 1
+          },
+          {
+            "string0": "VehFactory12",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory12",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "UnableToExpand"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "compare0": "<=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction) - Orbital",
+            "value0": 0
+          },
+          {
+            "string0": "VehFactory12",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "VehFabber11",
+        "VehFabber12"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 5,
+      "min_num_assisters": 2,
+      "name": "Veh Factory 12",
+      "placement_rules": {
+        "buffer": 3,
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 477,
+      "shared_instance_count": "Tech2Factory",
+      "to_build": "VehFactory12"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "compare0": ">",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction & Basic) - CombatFabAdvBuild - Orbital",
+            "value0": 0
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedVehicleFactory"
+          },
+          {
+            "string0": "VehFactory13",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "string0": "VehFactory13",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "UnableToExpand"
+          },
+          {
+            "compare0": ">",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction & Basic) - CombatFabAdvBuild - Orbital",
+            "value0": 0
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedVehicleFactory"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Basic & CombatFabAdvBuild) - NukeDefense - Nuke",
+            "value0": 1
+          },
+          {
+            "string0": "VehFactory13",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "compare0": ">",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction & Basic) - CombatFabAdvBuild - Orbital",
+            "value0": 0
+          },
+          {
+            "compare0": "<=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Factory & Construction & Tank & Basic & CombatFabAdvBuild",
+            "value0": 0
+          },
+          {
+            "string0": "VehFactory13",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "string0": "VehFactory13",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "VehFabber12",
+        "VehFabber13"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 5,
+      "min_num_assisters": 3,
+      "name": "Veh Factory 13",
+      "placement_rules": {
+        "buffer": 3,
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 477,
+      "shared_instance_count": "Tech3Factory",
+      "to_build": "VehFactory13"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": false,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "string0": "VehFactory21",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory21",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "string0": "VehFactory21",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory21",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedVehicleFactory"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction & Tank & Basic - FabAdvBuild - CombatFabAdvBuild) - Orbital",
+            "value0": 1
+          },
+          {
+            "string0": "VehFactory21",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory21",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "UnableToExpand"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "compare0": "<=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction) - Orbital",
+            "value0": 0
+          },
+          {
+            "string0": "VehFactory21",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "CommanderVeh2",
+        "VehFabber21"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 5,
+      "min_num_assisters": 2,
+      "name": "Veh Factory 21",
+      "placement_rules": {
+        "buffer": 3,
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 376,
+      "shared_instance_count": "Tech1Factory",
+      "to_build": "VehFactory21"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": false,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "string0": "VehFactory22",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory22",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "string0": "VehFactory22",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory22",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedVehicleFactory"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction & Tank & Basic & FabAdvBuild) - Orbital",
+            "value0": 1
+          },
+          {
+            "string0": "VehFactory22",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "string0": "VehFactory22",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "UnableToExpand"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedBasicVehicleFactory"
+          },
+          {
+            "compare0": "<=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction) - Orbital",
+            "value0": 0
+          },
+          {
+            "string0": "VehFactory22",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "VehFabber21",
+        "VehFabber22"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 5,
+      "min_num_assisters": 2,
+      "name": "Veh Factory 22",
+      "placement_rules": {
+        "buffer": 3,
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 477,
+      "shared_instance_count": "Tech2Factory",
+      "to_build": "VehFactory22"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "compare0": ">",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction & Basic) - CombatFabAdvBuild - Orbital",
+            "value0": 0
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedVehicleFactory"
+          },
+          {
+            "string0": "VehFactory23",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "string0": "VehFactory23",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "UnableToExpand"
+          },
+          {
+            "compare0": ">",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction & Basic) - CombatFabAdvBuild - Orbital",
+            "value0": 0
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedVehicleFactory"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Basic CombatFabAdvBuild) - NukeDefense - Nuke",
+            "value0": 1
+          },
+          {
+            "string0": "VehFactory23",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "VehFabber22",
+        "VehFabber23"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 5,
+      "min_num_assisters": 3,
+      "name": "Veh Factory 23",
+      "placement_rules": {
+        "buffer": 3,
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 477,
+      "shared_instance_count": "Tech3Factory",
+      "to_build": "VehFactory23"
+    }
+  ]
+}

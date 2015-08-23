@@ -1,0 +1,12 @@
+{
+  "blend_root": {
+    "node_idle": {
+      "type": "bind_pose"
+    },
+    "node_walk": {
+      "anim_name": "walk",
+      "type": "playback"
+    },
+    "type": "walk"
+  }
+}

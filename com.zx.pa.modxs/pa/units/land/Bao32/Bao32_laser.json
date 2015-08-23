@@ -1,0 +1,14 @@
+{
+  "ammo_id": "/pa/ammo/laser/ax_laser_ao.json",
+  "base_spec": "/pa/tools/laser/tx_laser.json",
+  "max_range": 180,
+  "target_layers": [
+    "WL_Orbital"
+  ],
+  "target_priorities": [
+    "Orbital & LaserPlatform",
+    "Orbital & Transport",
+    "Orbital & OrbitalDefense",
+    "Orbital"
+  ]
+}

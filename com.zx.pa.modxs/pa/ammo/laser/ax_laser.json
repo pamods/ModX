@@ -1,0 +1,17 @@
+{
+  "base_spec": "/pa/ammo/laser/ax_laser_.json",
+  "burn_damage": 8,
+  "damage": 80,
+  "events": {
+    "died": {
+      "audio_cue": "/SE/Impacts/laser_blast",
+      "effect_spec": "/pa/effects/specs/imp_laser_small.pfx"
+    },
+    "spawned": {
+      "audio_cue": "/SE/Weapons/structure/laser_defense_single_fire"
+    }
+  },
+  "fx_trail": {
+    "filename": "/pa/effects/specs/proj_laser.pfx"
+  }
+}

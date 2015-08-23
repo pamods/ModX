@@ -1,0 +1,76 @@
+{
+  "TEMP_texelinfo": 8,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        4
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/bot/grenadier_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/grenadier"
+    }
+  },
+  "base_spec": "/pa/units/generic/botA.json",
+  "build_metal_cost": 500,
+  "description": "Anti-orbital bot.",
+  "display_name": "Sentinel",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/bot"
+    }
+  },
+  "guard_layer": "WL_AnySurface",
+  "mesh_bounds": [
+    5,
+    5,
+    10
+  ],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/land/Bao32/Bao32_anim_idle.papa",
+      "walk": "/pa/units/land/Bao32/Bao32_anim_walk.papa"
+    },
+    "animtree": "/pa/units/land/Bao32/Bao32_at.json",
+    "filename": "/pa/units/land/Bao32/Bao32.papa",
+    "walk_speed": 3.5
+  },
+  "navigation": {
+    "acceleration": 150,
+    "brake": 150,
+    "move_speed": 15,
+    "turn_speed": 720
+  },
+  "physics": {
+    "radius": 2.5
+  },
+  "tools": [
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/Bao32/Bao32_laser.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_OrbitalDefense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_Custom2"
+  ]
+}

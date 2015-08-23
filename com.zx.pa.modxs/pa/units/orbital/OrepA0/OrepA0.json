@@ -1,0 +1,43 @@
+{
+  "TEMP_texelinfo": 25,
+  "area_build_separation": 5,
+  "atrophy_rate": 20,
+  "base_spec": "/pa/units/generic/orbS.json",
+  "build_metal_cost": 2000,
+  "description": "Manufacturing: orbital energy generation.",
+  "display_name": "Solar Array",
+  "events": {
+    "died": {
+      "effect_scale": 1.5
+    }
+  },
+  "max_health": 1500,
+  "mesh_bounds": [
+    50,
+    15,
+    6
+  ],
+  "model": {
+    "animations": {
+      "closed": "/pa/units/orbital/solar_array/solar_array_anim_closed.papa",
+      "deploy": "/pa/units/orbital/solar_array/solar_array_anim_deploy.papa",
+      "open": "/pa/units/orbital/solar_array/solar_array_anim_open.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/satellite_launched_anim_tree.json",
+    "filename": "/pa/units/orbital/solar_array/solar_array.papa"
+  },
+  "physics": {
+    "radius": 8
+  },
+  "production": {
+    "energy": 2000
+  },
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Orbital",
+    "UNITTYPE_EnergyProduction",
+    "UNITTYPE_Economy",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabOrbBuild"
+  ]
+}

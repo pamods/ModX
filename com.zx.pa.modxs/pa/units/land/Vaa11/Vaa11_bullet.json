@@ -1,0 +1,5 @@
+{
+  "base_spec": "/pa/tools/bullet/tx_bullet_big_aa.json",
+  "idle_aim_delay": 5,
+  "rate_of_fire": 16
+}

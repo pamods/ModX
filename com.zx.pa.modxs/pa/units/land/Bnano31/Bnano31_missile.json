@@ -1,0 +1,10 @@
+{
+  "ammo_source": "infinite",
+  "auto_attack": false,
+  "auto_task_type": "none",
+  "base_spec": "/pa/tools/missile/tx_missile.json",
+  "manual_fire": true,
+  "max_range": 60,
+  "no_busy_auto_attack": true,
+  "self_destruct": true
+}

@@ -1,0 +1,18 @@
+{
+  "ammo_capacity": 10000,
+  "ammo_demand": 2000,
+  "ammo_id": "/pa/ammo/uber/ax_uber.json",
+  "ammo_per_shot": 10000,
+  "ammo_source": "energy",
+  "base_spec": "/pa/tools/generic/tx_base.json",
+  "max_range": 140,
+  "pitch_range": 90,
+  "pitch_rate": 90,
+  "target_priorities": [
+    "Mobile",
+    "Structure - Wall",
+    "Wall"
+  ],
+  "yaw_range": 180,
+  "yaw_rate": 90
+}

@@ -1,0 +1,61 @@
+{
+  "blend_root": {
+    "nodes": {
+      "being_built": {
+        "type": "bind_pose"
+      },
+      "dead": {
+        "type": "bind_pose"
+      },
+      "ghost": {
+        "type": "bind_pose"
+      },
+      "living": {
+        "node_idle": {
+          "anim_name": "idle",
+          "type": "playback"
+        },
+        "node_walk": {
+          "anim_name": "walk",
+          "type": "playback"
+        },
+        "type": "walk"
+      }
+    },
+    "type": "unit_state"
+  },
+  "skeleton_controls": [
+    {
+      "child": {
+        "rotation_axis": "z",
+        "rotation_bone": "bone_turretBack",
+        "type": "procedural_aim",
+        "weapon_index": 0
+      },
+      "lerp_func": "is_active",
+      "type": "fader"
+    },
+    {
+      "child": {
+        "rotation_axis": "x",
+        "rotation_bone": "bone_pitchBack",
+        "type": "procedural_aim",
+        "weapon_index": 0
+      },
+      "lerp_func": "is_active",
+      "type": "fader"
+    },
+    {
+      "rotation_axis": "z",
+      "rotation_bone": "bone_turretFront",
+      "type": "procedural_aim",
+      "weapon_index": 1
+    },
+    {
+      "rotation_axis": "x",
+      "rotation_bone": "bone_recoil",
+      "type": "procedural_aim",
+      "weapon_index": 1
+    }
+  ]
+}

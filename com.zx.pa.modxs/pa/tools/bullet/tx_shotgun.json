@@ -1,0 +1,7 @@
+{
+  "ammo_id": "/pa/ammo/bullet/ax_shotgun.json",
+  "base_spec": "/pa/tools/bullet/tx_sniper.json",
+  "firing_standard_deviation": 2,
+  "max_range": 120,
+  "rate_of_fire": 1
+}

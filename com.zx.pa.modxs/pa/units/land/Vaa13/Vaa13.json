@@ -1,0 +1,72 @@
+{
+  "TEMP_texelinfo": 6.12932,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        1,
+        4.1
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/veh/aa_missile_vehicle_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/veh/aa_missile_vehicle"
+    }
+  },
+  "base_spec": "/pa/units/generic/veh.json",
+  "build_metal_cost": 1000,
+  "description": "AA vehicle: equipped with anti-air missiles.",
+  "display_name": "Spinner",
+  "guard_layer": "WL_Air",
+  "guard_radius": 250,
+  "label": "dfaskfmla",
+  "max_health": 150,
+  "mesh_bounds": [
+    3.4,
+    5,
+    4
+  ],
+  "model": {
+    "animations": {
+      "run": "/pa/units/land/aa_missile_vehicle/aa_missile_vehicle_anim_run.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/aa_missile_vehicle_anim_tree.json",
+    "filename": "/pa/units/land/aa_missile_vehicle/aa_missile_vehicle.papa",
+    "walk_speed": 7
+  },
+  "nearby_target_tick_update_interval": 1,
+  "physics": {
+    "radius": 3.5
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_pivot",
+      "muzzle_bone": "bone_pivot",
+      "spec_id": "/pa/units/land/Vaa13/Vaa13_missile.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Tank",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_AirDefense",
+    "UNITTYPE_Land",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

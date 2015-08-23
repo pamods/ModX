@@ -1,0 +1,17 @@
+{
+  "ammo_id": [
+    {
+      "id": "/pa/ammo/missile/ax_missile.json",
+      "layer": "WL_LandHorizontal"
+    },
+    {
+      "id": "/pa/ammo/torpedo/ax_torpedo.json",
+      "layer": "WL_Underwater"
+    }
+  ],
+  "ammo_source": "infinite",
+  "base_spec": "/pa/tools/missile/tx_missile.json",
+  "idle_aim_delay": 3,
+  "max_range": 180,
+  "rate_of_fire": 0.4
+}

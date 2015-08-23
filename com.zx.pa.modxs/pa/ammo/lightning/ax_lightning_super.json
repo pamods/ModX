@@ -1,0 +1,20 @@
+{
+  "base_spec": "/pa/ammo/generic/ax_beam_base.json",
+  "burn_damage": 50,
+  "burn_duration": 1,
+  "burn_radius": 15,
+  "damage": 2000,
+  "events": {
+    "spawned": {
+      "audio_cue": ""
+    }
+  },
+  "full_damage_splash_radius": 3,
+  "fx_beam_spec": "/pa/effects/specs/proj_lightning_super.pfx",
+  "fx_collision_spec": "/pa/effects/specs/imp_lightning_super.pfx",
+  "impact_decals": [
+    "/pa/effects/specs/scorch_c_01.json"
+  ],
+  "splash_damage": 50,
+  "splash_radius": 15
+}

@@ -1,0 +1,18 @@
+{
+  "author": "ZX0",
+  "build": "85138",
+  "category": [
+    "units",
+    "server-mod"
+  ],
+  "context": "server",
+  "date": "2015/08/11",
+  "description": "new units and stuff",
+  "display_name": "ModX server side",
+  "enabled": true,
+  "forum": "https://forums.uberent.com/threads/60372/",
+  "icon": "https://i.imgur.com/jjoyQ4s.png",
+  "identifier": "com.zx.pa.modxs",
+  "signature": "(not yet implemented)",
+  "version": "64"
+}

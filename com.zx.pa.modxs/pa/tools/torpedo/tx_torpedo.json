@@ -1,0 +1,11 @@
+{
+  "ammo_id": "/pa/ammo/torpedo/ax_torpedo.json",
+  "base_spec": "/pa/tools/torpedo/tx_torpedo_.json",
+  "max_range": 180,
+  "target_priorities": [
+    "Sub",
+    "Naval",
+    "Structure - Wall",
+    "Wall"
+  ]
+}

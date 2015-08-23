@@ -1,0 +1,5 @@
+{
+  "ammo_capacity": 8000,
+  "base_spec": "/pa/tools/missile/tx_missile_aa.json",
+  "idle_aim_delay": 5
+}

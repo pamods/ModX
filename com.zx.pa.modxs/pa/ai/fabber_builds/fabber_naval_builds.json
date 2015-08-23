@@ -1,0 +1,260 @@
+{
+  "build_list": [
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": false,
+            "test_type": "NeedBasicNavalFactory"
+          },
+          {
+            "string0": "NavFactory11",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "string0": "NavFactory11",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedBasicNavalFactory"
+          },
+          {
+            "string0": "NavFactory11",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "string0": "NavFactory11",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedNavalFactory"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction & Naval & Basic - FabAdvBuild - CombatFabAdvBuild) - Orbital",
+            "value0": 1
+          },
+          {
+            "string0": "NavFactory11",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "string0": "NavFactory11",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "UnableToExpand"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedBasicNavalFactory"
+          },
+          {
+            "compare0": "<=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Construction) - Orbital",
+            "value0": 0
+          },
+          {
+            "string0": "NavFactory11",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "Commander",
+        "NavFabber11"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 5,
+      "min_num_assisters": 2,
+      "name": "Nav Factory 11",
+      "placement_rules": {
+        "buffer": 3,
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 376,
+      "shared_instance_count": "Tech1Factory",
+      "to_build": "NavFactory11"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedNavalFactory"
+          },
+          {
+            "string0": "NavFactory12",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "string0": "NavFactory12",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "UnableToExpand"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedNavalFactory"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Basic & FabAdvBuild) - NukeDefense - Nuke",
+            "value0": 1
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "string0": "NavFactory12",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFabber11",
+        "NavFabber12"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 5,
+      "min_num_assisters": 2,
+      "name": "Nav Factory 13",
+      "placement_rules": {
+        "buffer": 3,
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 376,
+      "shared_instance_count": "Tech2Factory",
+      "to_build": "NavFactory12"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": true,
+            "test_type": "HaveEcoForAdvanced"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedNavalFactory"
+          },
+          {
+            "string0": "NavFactory13",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "string0": "NavFactory13",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "UnableToExpand"
+          },
+          {
+            "boolean": true,
+            "test_type": "NeedAdvancedNavalFactory"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Factory & Basic & CombatFabAdvBuild) - NukeDefense - Nuke",
+            "value0": 1
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "string0": "NavFactory13",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFabber12",
+        "NavFabber13"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 5,
+      "min_num_assisters": 3,
+      "name": "Nav Factory 13",
+      "placement_rules": {
+        "buffer": 3,
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 477,
+      "shared_instance_count": "Tech3Factory",
+      "to_build": "NavFactory13"
+    }
+  ]
+}

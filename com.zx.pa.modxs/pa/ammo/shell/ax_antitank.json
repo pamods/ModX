@@ -1,0 +1,22 @@
+{
+  "armor_damage_map": {
+    "AT_Structure": 0.25
+  },
+  "base_spec": "/pa/ammo/shell/ax_shell_.json",
+  "damage": 300,
+  "events": {
+    "died": {
+      "audio_cue": "/SE/Impacts/shell_tank",
+      "effect_spec": "/pa/effects/specs/imp_shell_at.pfx"
+    },
+    "spawned": {
+      "audio_cue": "/SE/Weapons/bot/sniper_fire"
+    }
+  },
+  "fx_trail": {
+    "filename": "/pa/effects/specs/proj_shell_at.pfx"
+  },
+  "initial_velocity": 500,
+  "lifetime": 0.5,
+  "max_velocity": 500
+}

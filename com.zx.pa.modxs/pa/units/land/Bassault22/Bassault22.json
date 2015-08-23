@@ -1,0 +1,71 @@
+{
+  "TEMP_texelinfo": 3,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        3
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/bot/assault_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/assault"
+    }
+  },
+  "base_spec": "/pa/units/generic/bot.json",
+  "build_metal_cost": 500,
+  "description": "Assault bot: equipped with machine gun and missile launcher.",
+  "display_name": "Striker",
+  "mesh_bounds": [
+    3.4,
+    2,
+    4
+  ],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/land/Bassault22/Bsupport22_anim_idle.papa",
+      "walk": "/pa/units/land/Bassault22/Bsupport22_anim_walk.papa"
+    },
+    "animtree": "/pa/units/land/Bassault22/Bassault22_at.json",
+    "filename": "/pa/units/land/Bassault22/Bsupport22.papa",
+    "walk_speed": 5
+  },
+  "physics": {
+    "radius": 2
+  },
+  "tools": [
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle01",
+      "record_index": 0,
+      "spec_id": "/pa/units/land/Bassault22/Bassault22_bullet.json"
+    },
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle02",
+      "record_index": 1,
+      "spec_id": "/pa/units/land/Bassault22/Bassault22_missile.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "base_spec": "/pa/ammo/generic/ax_base.json",
+  "max_velocity": 10000,
+  "physics": {
+    "gravity_scalar": 10
+  },
+  "turn_rate": 3
+}

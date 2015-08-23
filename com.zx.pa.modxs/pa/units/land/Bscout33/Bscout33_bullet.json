@@ -1,0 +1,5 @@
+{
+  "base_spec": "/pa/tools/bullet/tx_bullet.json",
+  "idle_aim_delay": 3,
+  "yaw_range": 120
+}

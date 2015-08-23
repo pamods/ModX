@@ -1,0 +1,336 @@
+{
+  "build_list": [
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "BaseThreatened"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Naval & Fabber & Basic - FabAdvBuild - CombatFabAdvBuild",
+            "value0": 2
+          },
+          {
+            "string0": "NavFabber11",
+            "test_type": "CanAffordPotentialDrain"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFactory11"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 10,
+      "name": "Nav Fabber 11",
+      "priority": 100,
+      "to_build": "NavFabber11"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "BaseThreatened"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Naval & Fabber & Basic & FabAdvBuild",
+            "value0": 2
+          },
+          {
+            "string0": "NavFabber12",
+            "test_type": "CanAffordPotentialDrain"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFactory12"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 10,
+      "name": "Nav Fabber 12",
+      "priority": 100,
+      "to_build": "NavFabber12"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "BaseThreatened"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Naval & Fabber & Basic & CombatFabAdvBuild",
+            "value0": 2
+          },
+          {
+            "string0": "NavFabber13",
+            "test_type": "CanAffordPotentialDrain"
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedNavalFactory"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 15,
+      "name": "Nav Fabber 13",
+      "priority": 200,
+      "to_build": "NavFabber13"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFactory11"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Nav Assault 11",
+      "priority": 97,
+      "to_build": "NavAssault11"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFactory12"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Nav Assault 12",
+      "priority": 97,
+      "to_build": "NavAssault12"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFactory13"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 15,
+      "name": "Nav Assault 13",
+      "priority": 199,
+      "to_build": "NavAssault13"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "compare0": ">",
+            "string0": "Naval",
+            "test_type": "PlanetThreat",
+            "value0": 0
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "Mobile & Naval & Sub",
+            "unit_type_string1": "Mobile & Naval - Fabber",
+            "value0": 0.25
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFactory11"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Nav Torpedo 11",
+      "priority": 97,
+      "to_build": "NavTorpedo11"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "compare0": ">",
+            "string0": "Naval",
+            "test_type": "PlanetThreat",
+            "value0": 0
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "Mobile & Naval & Sub",
+            "unit_type_string1": "Mobile & Naval - Fabber",
+            "value0": 0.25
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFactory12"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Nav Torpedo 12",
+      "priority": 97,
+      "to_build": "NavTorpedo12"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFactory11"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Nav AA 11",
+      "priority": 97,
+      "to_build": "NavAA11"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "NavFactory13"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Nav AA 13",
+      "priority": 97,
+      "to_build": "NavAA13"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "compare0": ">",
+            "string0": "Naval",
+            "test_type": "PlanetThreat",
+            "value0": 0
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "Mobile & Naval & Sub",
+            "unit_type_string1": "Mobile & Naval - Fabber",
+            "value0": 0.25
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "NavTactical13"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 15,
+      "name": "Nav Tactical 13",
+      "priority": 199,
+      "to_build": "NavTactical13"
+    }
+  ]
+}

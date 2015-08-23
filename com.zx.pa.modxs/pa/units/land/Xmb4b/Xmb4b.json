@@ -1,0 +1,107 @@
+{
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        12
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/commander/Commander_move_loop_quad"
+      }
+    }
+  },
+  "base_spec": "/pa/units/generic/super_.json",
+  "description": "Stealth superunit armed with laser beam.",
+  "display_name": "Tarantula",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/bot"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Bot",
+      "effect_scale": 2
+    }
+  },
+  "guard_layer": "WL_LandHorizontal",
+  "guard_radius": 200,
+  "influence_radius": 700,
+  "max_health": 7000,
+  "mesh_bounds": [
+    30,
+    30,
+    24
+  ],
+  "model": {
+    "animations": {
+      "walk": "/pa/units/land/Xmb4b/mb4b_anim_walk.papa"
+    },
+    "animtree": "/pa/anim/one_turret_walk.json",
+    "filename": "/pa/units/land/Xmb4b/mb4b.papa",
+    "walk_speed": 7.5
+  },
+  "navigation": {
+    "acceleration": 150,
+    "brake": 150,
+    "group_preference": "front",
+    "move_speed": 15,
+    "turn_speed": 180
+  },
+  "physics": {
+    "radius": 6
+  },
+  "placement_size": [
+    30,
+    30
+  ],
+  "recon": {
+    "observable": {
+      "ignore_radar": true
+    },
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 160,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 32,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 32,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "tools": [
+    {
+      "aim_bone": "pitch00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/Xmb4b/Xmb4b_beam.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Heavy",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

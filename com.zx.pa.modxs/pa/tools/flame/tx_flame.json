@@ -1,0 +1,12 @@
+{
+  "ammo_id": "/pa/ammo/flame/ax_flame.json",
+  "base_spec": "/pa/tools/generic/tx_base.json",
+  "max_range": 35,
+  "rate_of_fire": 10,
+  "target_priorities": [
+    "Mobile - Air",
+    "Structure - Wall",
+    "Naval",
+    "Wall"
+  ]
+}

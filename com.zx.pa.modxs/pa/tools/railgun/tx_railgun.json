@@ -1,0 +1,13 @@
+{
+  "ammo_id": "/pa/ammo/railgun/ax_railgun.json",
+  "base_spec": "/pa/tools/generic/tx_base.json",
+  "max_range": 120,
+  "target_priorities": [
+    "Mobile & Bot - Heavy",
+    "Mobile & Tank - Heavy",
+    "Mobile & Naval - Heavy",
+    "Mobile & Heavy",
+    "Structure - Wall",
+    "Wall"
+  ]
+}

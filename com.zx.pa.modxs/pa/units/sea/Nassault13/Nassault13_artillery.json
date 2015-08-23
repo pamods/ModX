@@ -1,0 +1,8 @@
+{
+  "ammo_source": "infinite",
+  "base_spec": "/pa/tools/artillery/tx_artillery.json",
+  "idle_aim_delay": 5,
+  "pitch_rate": 60,
+  "yaw_range": 135,
+  "yaw_rate": 60
+}

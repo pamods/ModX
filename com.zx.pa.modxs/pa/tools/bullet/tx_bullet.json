@@ -1,0 +1,12 @@
+{
+  "ammo_id": "/pa/ammo/bullet/ax_bullet.json",
+  "base_spec": "/pa/tools/bullet/tx_bullet_.json",
+  "max_range": 100,
+  "rate_of_fire": 4,
+  "target_priorities": [
+    "Mobile - Air - Naval",
+    "Mobile & Naval",
+    "Structure - Wall",
+    "Wall"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "TEMP_texelinfo": 26.6522,
+  "atrophy_rate": 200,
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/artillery"
+    }
+  },
+  "base_spec": "/pa/units/generic/strB.json",
+  "build_metal_cost": 20000,
+  "command_caps": [
+    "ORDER_Attack"
+  ],
+  "description": "Advanced artillery: equipped with long range anti-land, and anti-ship gun.",
+  "display_name": "Holkins",
+  "events": {
+    "died": {
+      "effect_spec": "/pa/effects/specs/exp_size3.pfx"
+    }
+  },
+  "lamps": [
+    {
+      "bone": "bone_pitch",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 2,
+      "offset": [
+        0,
+        -11.21,
+        3.69
+      ],
+      "radius": 4
+    }
+  ],
+  "max_health": 4000,
+  "mesh_bounds": [
+    13,
+    30.8,
+    15.0376
+  ],
+  "model": [
+    {
+      "animtree": "/pa/units/land/Sdart13/Sdart13_at.json",
+      "filename": "/pa/units/land/artillery_long/artillery_long.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_artillery_long.json"
+    },
+    {
+      "animtree": "/pa/units/land/Sdart13/Sdart13_at.json",
+      "filename": "/pa/units/sea/artillery_long/artillery_long.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "nearby_target_tick_update_interval": 30,
+  "tools": [
+    {
+      "aim_bone": "socket_aim",
+      "muzzle_bone": "socket_muzzle",
+      "spec_id": "/pa/units/land/Sdart13/Sdart13_artillery.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Important",
+    "UNITTYPE_Land",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Defense",
+    "UNITTYPE_Artillery",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

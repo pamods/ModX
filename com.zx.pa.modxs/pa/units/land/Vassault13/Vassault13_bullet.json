@@ -1,0 +1,11 @@
+{
+  "ammo_id": [
+    {
+      "id": "/pa/ammo/bullet/ax_bullet.json",
+      "layer": "WL_LandHorizontal"
+    }
+  ],
+  "base_spec": "/pa/tools/bullet/tx_bullet_big.json",
+  "idle_aim_delay": 3,
+  "yaw_range": 120
+}

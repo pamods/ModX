@@ -1,0 +1,12 @@
+{
+  "ammo_capacity": 1000,
+  "ammo_demand": 200,
+  "base_spec": "/pa/tools/missile/tx_missile_aa.json",
+  "target_priorities": [
+    "Air & Bomber",
+    "Air & Gunship",
+    "Air & Transport",
+    "Air & Scout",
+    "Air & Mobile"
+  ]
+}

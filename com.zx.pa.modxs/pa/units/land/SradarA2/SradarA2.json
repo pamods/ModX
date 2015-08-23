@@ -1,0 +1,146 @@
+{
+  "TEMP_texelinfo": 16.9774,
+  "area_build_separation": 100,
+  "area_build_type": "Sphere",
+  "atrophy_rate": 20,
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/radar"
+    }
+  },
+  "base_spec": "/pa/units/generic/strS.json",
+  "build_metal_cost": 2000,
+  "consumption": {
+    "energy": 400
+  },
+  "description": "Detects nearby enemy land, sea, and air units.",
+  "display_name": "Tech 2 radar",
+  "energy_efficiency_requirement": 0.9,
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/radar"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/radar",
+      "effect_scale": 0.8,
+      "effect_spec": "/pa/effects/specs/exp_turret.pfx"
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "bone_rotator",
+      "filename": "/pa/units/land/radar_adv/radar_adv_top_on.pfx",
+      "offset": [
+        0,
+        0.145,
+        1.425
+      ],
+      "orientation": [
+        0,
+        -45,
+        180
+      ],
+      "type": "energy"
+    },
+    {
+      "bone": "bone_dish02",
+      "filename": "/pa/units/land/radar_adv/radar_adv_dish02_on.pfx",
+      "offset": [
+        0,
+        -0.264,
+        0
+      ],
+      "orientation": [
+        0,
+        -90,
+        0
+      ],
+      "type": "energy"
+    }
+  ],
+  "lamps": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 2,
+      "offset": [
+        0,
+        3.68,
+        5.53
+      ],
+      "radius": 3
+    }
+  ],
+  "max_health": 600,
+  "mesh_bounds": [
+    8.58559,
+    7.71255,
+    20
+  ],
+  "model": [
+    {
+      "animations": {
+        "idle": "/pa/units/land/SradarA2/SradarA2_anim_idle.papa"
+      },
+      "animtree": "/pa/anim/idle_power.json",
+      "filename": "/pa/units/land/SradarA2/SradarA2.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_radar_adv.json"
+    },
+    {
+      "animations": {
+        "idle": "/pa/units/land/SradarA2/SradarA2_anim_idle.papa"
+      },
+      "animtree": "/pa/anim/idle_power.json",
+      "filename": "/pa/units/land/SradarA2/sea/SradarA2.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 120,
+          "shape": "capsule",
+          "uses_energy": false
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 24,
+          "shape": "capsule",
+          "uses_energy": false
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 24,
+          "shape": "capsule",
+          "uses_energy": false
+        },
+        {
+          "channel": "radar",
+          "layer": "surface_and_air",
+          "radius": 600,
+          "shape": "sphere",
+          "uses_energy": true
+        }
+      ]
+    }
+  },
+  "unit_types": [
+    "UNITTYPE_Land",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Recon",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

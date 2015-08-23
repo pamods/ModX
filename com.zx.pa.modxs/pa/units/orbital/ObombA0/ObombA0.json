@@ -1,0 +1,149 @@
+{
+  "TEMP_texelinfo": 20,
+  "base_spec": "/pa/units/generic/orbM.json",
+  "build_metal_cost": 5000,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Attack",
+    "ORDER_Assist"
+  ],
+  "description": "Mobile laser platform.",
+  "display_name": "Orbital bombardment spaceship",
+  "events": {
+    "died": {
+      "effect_scale": 1.3,
+      "effect_spec": "/pa/effects/specs/exp_size3.pfx"
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "engine01",
+      "filename": "/pa/effects/specs/jet_aircraftNT.pfx",
+      "type": "moving"
+    },
+    {
+      "bone": "engine02",
+      "filename": "/pa/effects/specs/jet_aircraftNT.pfx",
+      "type": "moving"
+    },
+    {
+      "bone": "engine03",
+      "filename": "/pa/effects/specs/jet_aircraftNT.pfx",
+      "type": "moving"
+    },
+    {
+      "bone": "engine04",
+      "filename": "/pa/effects/specs/jet_aircraftNT.pfx",
+      "type": "moving"
+    },
+    {
+      "bone": "engine05",
+      "filename": "/pa/effects/specs/jet_aircraftNT.pfx",
+      "type": "moving"
+    },
+    {
+      "bone": "engine01",
+      "filename": "/pa/effects/specs/jet_aircraftDot.pfx",
+      "type": "idle"
+    },
+    {
+      "bone": "engine02",
+      "filename": "/pa/effects/specs/jet_aircraftDot.pfx",
+      "type": "idle"
+    },
+    {
+      "bone": "engine03",
+      "filename": "/pa/effects/specs/jet_aircraftDot.pfx",
+      "type": "idle"
+    },
+    {
+      "bone": "engine04",
+      "filename": "/pa/effects/specs/jet_aircraftDot.pfx",
+      "type": "idle"
+    },
+    {
+      "bone": "engine05",
+      "filename": "/pa/effects/specs/jet_aircraftDot.pfx",
+      "type": "idle"
+    }
+  ],
+  "guard_layer": "WL_Orbital",
+  "guard_radius": 200,
+  "max_health": 4000,
+  "mesh_bounds": [
+    18,
+    30,
+    10
+  ],
+  "model": {
+    "animations": {
+      "closed": "/pa/units/orbital/ObombA0/orbital_bombardment_anim_closed.papa",
+      "deploy": "/pa/units/orbital/ObombA0/orbital_bombardment_anim_deploy.papa",
+      "open": "/pa/units/orbital/ObombA0/orbital_bombardment_anim_open.papa"
+    },
+    "animtree": "/pa/units/orbital/ObombA0/orbital_bombardment_anim_tree.json",
+    "filename": "/pa/units/orbital/ObombA0/orbital_bombardment.papa"
+  },
+  "navigation": {
+    "aggressive_distance": 150,
+    "bank_factor": 1,
+    "circle_max_time": 0,
+    "circle_min_time": 0,
+    "hover_time": -1,
+    "move_speed": 30
+  },
+  "physics": {
+    "push_class": 18,
+    "radius": 9
+  },
+  "spawn_layers": "WL_Orbital",
+  "tools": [
+    {
+      "aim_bone": "turret01",
+      "muzzle_bone": [
+        "muzzleA01",
+        "muzzleB01"
+      ],
+      "record_index": 0,
+      "spec_id": "/pa/units/orbital/ObombA0/ObombA0_laser.json"
+    },
+    {
+      "aim_bone": "turret02",
+      "muzzle_bone": [
+        "muzzleA02",
+        "muzzleB02"
+      ],
+      "record_index": 1,
+      "spec_id": "/pa/units/orbital/ObombA0/ObombA0_laser.json"
+    },
+    {
+      "aim_bone": "turret03",
+      "muzzle_bone": [
+        "muzzleA03",
+        "muzzleB03"
+      ],
+      "record_index": 2,
+      "spec_id": "/pa/units/orbital/ObombA0/ObombA0_laser.json"
+    },
+    {
+      "aim_bone": "turret04",
+      "muzzle_bone": [
+        "muzzleA04",
+        "muzzleB04"
+      ],
+      "record_index": 3,
+      "spec_id": "/pa/units/orbital/ObombA0/ObombA0_laser.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Orbital",
+    "UNITTYPE_LaserPlatform",
+    "UNITTYPE_Heavy",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_CombatFabAdvBuild"
+  ]
+}

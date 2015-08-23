@@ -1,0 +1,120 @@
+{
+  "TEMP_texelinfo": 21.4256,
+  "atrophy_rate": 10,
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/metal"
+    }
+  },
+  "base_spec": "/pa/units/generic/strS.json",
+  "build_metal_cost": 1000,
+  "description": "Economy: increases maximum metal storage capacity.",
+  "display_name": "Metal Storage",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/metal"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Factory",
+      "effect_scale": 0.8
+    }
+  },
+  "headlights": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "far_distance": 25,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 2,
+      "near_distance": 5,
+      "near_height": 8,
+      "near_width": 8,
+      "offset": [
+        0,
+        -9.63,
+        13
+      ],
+      "orientation": [
+        0,
+        23,
+        0
+      ]
+    }
+  ],
+  "lamps": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 1,
+      "offset": [
+        2.5,
+        9.59,
+        8.54
+      ],
+      "radius": 11
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 1,
+      "offset": [
+        -2.5,
+        9.59,
+        8.54
+      ],
+      "radius": 11
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 3,
+      "offset": [
+        0,
+        -9.63,
+        13
+      ],
+      "radius": 4
+    }
+  ],
+  "max_health": 3000,
+  "mesh_bounds": [
+    18,
+    18,
+    17.151
+  ],
+  "model": [
+    {
+      "filename": "/pa/units/land/metal_storage/metal_storage.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_metal.json"
+    },
+    {
+      "filename": "/pa/units/sea/sea_metal_storage/sea_metal_storage.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "storage": {
+    "metal": 5000
+  },
+  "unit_types": [
+    "UNITTYPE_Economy",
+    "UNITTYPE_Structure",
+    "UNITTYPE_CmdBuild",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

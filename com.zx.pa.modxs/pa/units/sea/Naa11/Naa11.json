@@ -1,0 +1,70 @@
+{
+  "TEMP_texelinfo": 5,
+  "base_spec": "/pa/units/generic/navL.json",
+  "build_metal_cost": 500,
+  "description": "Anti-air boat: armed with a flak cannon.",
+  "display_name": "Maelstrom",
+  "fx_offsets": [
+    {
+      "filename": "/pa/effects/specs/jet_navalL_back.pfx",
+      "offset": [
+        1.4,
+        3.3,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "filename": "/pa/effects/specs/jet_navalL_back.pfx",
+      "offset": [
+        -1.4,
+        3.3,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "filename": "/pa/effects/specs/jet_navalL_front.pfx",
+      "offset": [
+        0,
+        -3.5,
+        0
+      ],
+      "type": "moving"
+    }
+  ],
+  "mesh_bounds": [
+    3.2,
+    6.4,
+    2.4
+  ],
+  "model": {
+    "animtree": "/pa/units/sea/Naa11/Naa11_anim_tree.json",
+    "filename": "/pa/units/sea/Naa11/Naa11.papa"
+  },
+  "physics": {
+    "radius": 3
+  },
+  "spawn_layers": "WL_WaterSurface",
+  "tools": [
+    {
+      "aim_bone": "pitch01",
+      "muzzle_bone": [
+        "muzzle01a",
+        "muzzle01b",
+        "muzzle01c",
+        "muzzle01d"
+      ],
+      "spec_id": "/pa/units/sea/Naa11/Naa11_shell.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Naval",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

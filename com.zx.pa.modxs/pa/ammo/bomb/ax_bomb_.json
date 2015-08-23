@@ -1,0 +1,14 @@
+{
+  "base_spec": "/pa/ammo/generic/ax_base.json",
+  "flight_type": "Staged",
+  "stages": [
+    {
+      "apply_thrust": false,
+      "ignores_LOS": true,
+      "ignores_gravity": false,
+      "rotates_to_velocity": true,
+      "stage_duration": 50000,
+      "stage_turn_rate": 0
+    }
+  ]
+}

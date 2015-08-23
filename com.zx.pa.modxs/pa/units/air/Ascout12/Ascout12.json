@@ -1,0 +1,97 @@
+{
+  "TEMP_texelinfo": 5,
+  "base_spec": "/pa/units/generic/airS.json",
+  "build_metal_cost": 1000,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Assist"
+  ],
+  "consumption": {
+    "energy": 40
+  },
+  "description": "Spy plane: equipped radar and radar jammer.",
+  "display_name": "Dragonfly",
+  "energy_efficiency_requirement": 0.9,
+  "fx_offsets": [
+    {
+      "bone": "engine01",
+      "filename": "/pa/effects/specs/jet_aircraftNT.pfx",
+      "type": "moving_forward"
+    },
+    {
+      "bone": "engine02",
+      "filename": "/pa/effects/specs/jet_aircraftNT.pfx",
+      "type": "moving_forward"
+    }
+  ],
+  "max_health": 100,
+  "mesh_bounds": [
+    5.2,
+    10,
+    2.4
+  ],
+  "model": {
+    "animations": {
+      "closed": "/pa/units/air/Ascout12/Ascout12_anim_landed.papa",
+      "deploy": "/pa/units/air/Ascout12/Ascout12_anim_finished.papa"
+    },
+    "animtree": "/pa/anim/deploy.json",
+    "filename": "/pa/units/air/Ascout12/Ascout12.papa"
+  },
+  "navigation": {
+    "dodge_multiplier": 1,
+    "dodge_radius": 10,
+    "turn_speed": 60
+  },
+  "physics": {
+    "radius": 5
+  },
+  "recon": {
+    "observable": {
+      "ignore_radar": true,
+      "layer": "surface_and_air"
+    },
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 160,
+          "shape": "sphere",
+          "uses_energy": false
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 32,
+          "shape": "sphere",
+          "uses_energy": false
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 32,
+          "shape": "sphere",
+          "uses_energy": false
+        },
+        {
+          "channel": "radar",
+          "layer": "surface_and_air",
+          "radius": 250,
+          "shape": "sphere",
+          "uses_energy": true
+        }
+      ]
+    }
+  },
+  "unit_types": [
+    "UNITTYPE_Scout",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Air",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

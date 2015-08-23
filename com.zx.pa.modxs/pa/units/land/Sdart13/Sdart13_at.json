@@ -1,0 +1,37 @@
+{
+  "blend_root": {
+    "type": "bind_pose"
+  },
+  "skeleton_controls": [
+    {
+      "child": {
+        "rotation_axis": "z",
+        "rotation_bone": "bone_turret",
+        "type": "procedural_aim"
+      },
+      "lerp_func": "is_active",
+      "type": "fader"
+    },
+    {
+      "child": {
+        "rotation_axis": "x",
+        "rotation_bone": "bone_pitch",
+        "type": "procedural_aim"
+      },
+      "lerp_func": "is_active",
+      "type": "fader"
+    },
+    {
+      "bone": "bone_recoil01",
+      "recoil_dist": 2,
+      "restore_time": 1.5,
+      "type": "recoil"
+    },
+    {
+      "bone": "bone_recoil02",
+      "recoil_dist": 3,
+      "restore_time": 3,
+      "type": "recoil"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "TEMP_texelinfo": 6.95074,
+  "audio": {
+    "loops": {
+      "build": {
+        "cue": "/SE/Construction/Fab_contruction_beam_loop",
+        "flag": "build_target_changed",
+        "should_start_func": "has_build_target",
+        "should_stop_func": "no_build_target"
+      },
+      "move": {
+        "cue": "/SE/Movement/sea/Fab_sub_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    }
+  },
+  "base_spec": "/pa/units/generic/navS.json",
+  "build_metal_cost": 200,
+  "buildable_types": "((FabBuild & Factory & (Naval | (Orbital & Land))) | (FabBuild - Factory - CombatFabAdvBuild)) & Custom1 - Nobuild",
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Build",
+    "ORDER_Reclaim",
+    "ORDER_Repair",
+    "ORDER_Assist"
+  ],
+  "description": "Basic fabricator: builds naval structures",
+  "display_name": "Tech 2 fabrication sub",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/fab"
+    },
+    "died": {
+      "effect_scale": 0.8,
+      "effect_spec": "/pa/effects/specs/exp_naval_sub.pfx"
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "socket_muzzle",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "type": "build"
+    },
+    {
+      "filename": "/pa/effects/specs/jet_navalS_back.pfx",
+      "offset": [
+        0,
+        7.2,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "filename": "/pa/effects/specs/jet_navalL_front.pfx",
+      "offset": [
+        0,
+        0,
+        2.6
+      ],
+      "type": "moving"
+    }
+  ],
+  "max_health": 200,
+  "mesh_bounds": [
+    4,
+    10,
+    4
+  ],
+  "model": {
+    "animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json",
+    "filename": "/pa/units/sea/fabrication_sub/fabrication_sub.papa"
+  },
+  "physics": {
+    "push_class": 8,
+    "radius": 6
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 20,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 24,
+          "shape": "capsule"
+        },
+        {
+          "channel": "radar",
+          "layer": "underwater",
+          "radius": 100,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "spec_id": "/pa/units/sea/fabrication_sub/fabrication_sub_build_arm.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Fabber",
+    "UNITTYPE_Naval",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Sub",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

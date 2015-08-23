@@ -1,0 +1,84 @@
+{
+  "TEMP_texelinfo": 7,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        3
+      ]
+    }
+  },
+  "base_spec": "/pa/units/generic/airE.json",
+  "build_metal_cost": 100,
+  "buildable_types": "((FabBuild & Factory & ((Air - CombatFabAdvBuild) | (Orbital & Land) | NukeDefense)) | (FabBuild - Factory - FabAdvBuild - CombatFabAdvBuild)) & Custom1 - Nobuild",
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Build",
+    "ORDER_Reclaim",
+    "ORDER_Repair",
+    "ORDER_Assist",
+    "ORDER_Use"
+  ],
+  "description": "Tech 1 fabricator: wired to build structures.",
+  "display_name": "Tech 1 fabrication aircraft",
+  "fx_offsets": [
+    {
+      "bone": "muzzle00",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "type": "build"
+    },
+    {
+      "bone": "engine01",
+      "filename": "/pa/effects/specs/jet_aircraftH.pfx",
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "bone": "engine02",
+      "filename": "/pa/effects/specs/jet_aircraftH.pfx",
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving"
+    }
+  ],
+  "max_health": 100,
+  "mesh_bounds": [
+    5,
+    6.5,
+    3
+  ],
+  "model": {
+    "animations": {
+      "fly": "/pa/units/air/Afab11/Afab11_anim_fly.papa"
+    },
+    "animtree": "/pa/anim/airfab.json",
+    "filename": "/pa/units/air/Afab11/Afab11.papa"
+  },
+  "physics": {
+    "radius": 4
+  },
+  "tools": [
+    {
+      "aim_bone": "turret00",
+      "spec_id": "/pa/units/air/Afab11/Afab11_build_arm.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Air",
+    "UNITTYPE_Fabber",
+    "UNITTYPE_Construction",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

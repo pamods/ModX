@@ -1,0 +1,69 @@
+{
+  "blend_root": {
+    "nodes": {
+      "being_built": {
+        "type": "bind_pose"
+      },
+      "dead": {
+        "type": "bind_pose"
+      },
+      "ghost": {
+        "type": "bind_pose"
+      },
+      "living": {
+        "type": "bind_pose"
+      }
+    },
+    "type": "unit_state"
+  },
+  "skeleton_controls": [
+    {
+      "child": {
+        "rotation_axis": "z",
+        "rotation_bone": "turret",
+        "type": "procedural_aim"
+      },
+      "lerp_func": "not_being_built",
+      "type": "fader"
+    },
+    {
+      "child": {
+        "rotation_axis": "x",
+        "rotation_bone": "pitch",
+        "type": "procedural_aim"
+      },
+      "lerp_func": "not_being_built",
+      "type": "fader"
+    },
+    {
+      "child": {
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity_range": [
+          100,
+          360,
+          20
+        ],
+        "bone": "turret",
+        "drag": 0.5,
+        "gravity": 20,
+        "type": "giblet",
+        "velocity": [
+          0,
+          5,
+          15
+        ],
+        "velocity_range": [
+          10,
+          10,
+          5
+        ]
+      },
+      "lerp_func": "is_dead",
+      "type": "fader"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "TEMP_texelinfo": 9.09853,
+  "area_build_separation": 18,
+  "atrophy_rate": 10,
+  "base_spec": "/pa/units/generic/strT.json",
+  "build_metal_cost": 1000,
+  "command_caps": [
+    "ORDER_Attack"
+  ],
+  "description": "Advanced turret: equipped with flak cannons.",
+  "display_name": "Flak turret",
+  "guard_layer": "WL_Air",
+  "guard_radius": 200,
+  "max_health": 600,
+  "mesh_bounds": [
+    7,
+    7,
+    9.4
+  ],
+  "model": [
+    {
+      "animtree": "/pa/anim/anim_trees/air_defense_adv_anim_tree.json",
+      "filename": "/pa/units/land/air_defense_adv/air_defense_adv.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_air_defense_adv.json"
+    },
+    {
+      "animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json",
+      "filename": "/pa/units/sea/air_defense_adv/air_defense_adv.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "nearby_target_tick_update_interval": 3,
+  "tools": [
+    {
+      "aim_bone": "bone_pitch",
+      "muzzle_bone": [
+        "socket_rightMuzzle01",
+        "socket_rightMuzzle02"
+      ],
+      "spec_id": "/pa/units/land/SdaaA2/SdaaA2_flak.json"
+    },
+    {
+      "aim_bone": "bone_pitch",
+      "muzzle_bone": [
+        "socket_leftMuzzle01",
+        "socket_leftMuzzle02"
+      ],
+      "spec_id": "/pa/units/land/SdaaA2/SdaaA2_flak.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Land",
+    "UNITTYPE_AirDefense",
+    "UNITTYPE_Defense",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

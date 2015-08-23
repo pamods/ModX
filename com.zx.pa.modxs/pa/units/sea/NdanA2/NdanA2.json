@@ -1,0 +1,96 @@
+{
+  "TEMP_texelinfo": 14.1009,
+  "area_build_separation": 18,
+  "armor_type": "AT_Naval",
+  "atrophy_rate": 50,
+  "base_spec": "/pa/units/generic/strS.json",
+  "build_metal_cost": 5000,
+  "command_caps": [
+    "ORDER_Attack"
+  ],
+  "description": "Torpedo Launcher: advanced anti-ship defense.",
+  "display_name": "Advanced Torpedo Launcher",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/sea"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Sea",
+      "effect_scale": 1.3
+    }
+  },
+  "guard_layer": "WL_AnySurface",
+  "guard_radius": 250,
+  "max_health": 1000,
+  "mesh_bounds": [
+    15,
+    9,
+    5
+  ],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/sea/torpedo_launcher/torpedo_launcher_anim_idle.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/torpedo_launcher_adv_anim_tree.json",
+    "filename": "/pa/units/sea/torpedo_launcher_adv/torpedo_launcher_adv.papa"
+  },
+  "recon": {
+    "observable": {
+      "layer": "underwater"
+    },
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 20,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 20,
+          "shape": "capsule"
+        },
+        {
+          "channel": "radar",
+          "layer": "mine",
+          "radius": 200,
+          "shape": "capsule"
+        },
+        {
+          "channel": "radar",
+          "layer": "underwater",
+          "radius": 200,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "spawn_layers": "WL_WaterSurface",
+  "tools": [
+    {
+      "aim_bone": "bone_turret",
+      "muzzle_bone": [
+        "socket_rightMuzzle",
+        "socket_centerMuzzle",
+        "socket_leftMuzzle"
+      ],
+      "spec_id": "/pa/units/sea/NdanA2/NdanA2_torpedo.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Naval",
+    "UNITTYPE_Defense",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_CombatFabAdvBuild"
+  ]
+}

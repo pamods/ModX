@@ -1,0 +1,126 @@
+{
+  "blend_root": {
+    "nodes": {
+      "being_built": {
+        "type": "bind_pose"
+      },
+      "dead": {
+        "anim_name": "death01",
+        "looping": false,
+        "type": "playback"
+      },
+      "ghost": {
+        "type": "bind_pose"
+      },
+      "living": {
+        "aim_bone_root": "bone_turret",
+        "child": {
+          "node_idle": {
+            "type": "bind_pose"
+          },
+          "node_walk": {
+            "anim_name": "walk",
+            "type": "playback"
+          },
+          "type": "walk"
+        },
+        "node_aim_down": {
+          "anim_name": "aim_down",
+          "type": "playback"
+        },
+        "node_aim_neutral": {
+          "type": "bind_pose"
+        },
+        "node_aim_up": {
+          "anim_name": "aim_up",
+          "type": "playback"
+        },
+        "type": "aim_blend"
+      }
+    },
+    "type": "unit_state"
+  },
+  "skeleton_controls": [
+    {
+      "child": {
+        "rotation_axis": "z",
+        "rotation_bone": "bone_turret",
+        "type": "procedural_aim"
+      },
+      "lerp_func": "not_being_built",
+      "type": "fader"
+    },
+    {
+      "bone": "bone_leftRecoil",
+      "recoil_dist": 0.75,
+      "restore_time": 0.5,
+      "type": "recoil"
+    },
+    {
+      "bone": "bone_rightRecoil",
+      "recoil_dist": 0.75,
+      "restore_time": 0.5,
+      "type": "recoil"
+    },
+    {
+      "child": {
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity_range": [
+          360,
+          360,
+          360
+        ],
+        "bone": "bone_rightShoulder",
+        "drag": 0.5,
+        "gravity": 20,
+        "type": "giblet",
+        "velocity": [
+          0,
+          0,
+          15
+        ],
+        "velocity_range": [
+          10,
+          10,
+          5
+        ]
+      },
+      "lerp_func": "is_dead",
+      "type": "fader"
+    },
+    {
+      "child": {
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity_range": [
+          360,
+          360,
+          360
+        ],
+        "bone": "bone_leftShoulder",
+        "drag": 0.5,
+        "gravity": 20,
+        "type": "giblet",
+        "velocity": [
+          0,
+          0,
+          15
+        ],
+        "velocity_range": [
+          10,
+          10,
+          5
+        ]
+      },
+      "lerp_func": "is_dead",
+      "type": "fader"
+    }
+  ]
+}

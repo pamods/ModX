@@ -1,0 +1,14 @@
+{
+  "ammo_id": "/pa/ammo/shell/ax_mortar.json",
+  "arc_type": "ARC_High",
+  "base_spec": "/pa/tools/shell/tx_shell.json",
+  "max_firing_velocity": 200,
+  "max_range": 180,
+  "min_firing_velocity": 50,
+  "rate_of_fire": 1,
+  "target_priorities": [
+    "Mobile - Air",
+    "Structure - Wall",
+    "Wall"
+  ]
+}

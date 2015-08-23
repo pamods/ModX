@@ -1,0 +1,12 @@
+{
+  "base_spec": "/pa/tools/generic/tx_none.json",
+  "max_range": 600,
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": "bone_root",
+      "show_range": true,
+      "spec_id": "/pa/units/orbital/SoradarA1/SoradarA1_radar.json"
+    }
+  ]
+}

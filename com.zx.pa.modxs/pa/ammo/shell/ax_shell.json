@@ -1,0 +1,31 @@
+{
+  "armor_damage_map": {
+    "AT_Structure": 1.25
+  },
+  "base_spec": "/pa/ammo/shell/ax_shell_.json",
+  "events": {
+    "died": {
+      "audio_cue": "/SE/Impacts/shell_tank",
+      "effect_spec": "/pa/effects/specs/imp_shell.pfx"
+    },
+    "spawned": {
+      "audio_cue": "/SE/Weapons/veh/tank_light_fire"
+    }
+  },
+  "full_damage_splash_radius": 2,
+  "fx_trail": {
+    "filename": "/pa/effects/specs/proj_shell.pfx",
+    "offset": [
+      0,
+      0.8,
+      0
+    ]
+  },
+  "impact_decals": [
+    "/pa/effects/specs/scorch_shell.json"
+  ],
+  "model": {
+    "filename": "/pa/units/air/shell/shell.papa"
+  },
+  "splash_radius": 5
+}

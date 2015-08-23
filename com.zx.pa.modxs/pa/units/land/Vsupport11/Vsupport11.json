@@ -1,0 +1,89 @@
+{
+  "TEMP_texelinfo": 8,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        4.3
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/veh/tank_inferno_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/veh/tank_inferno"
+    }
+  },
+  "base_spec": "/pa/units/generic/veh.json",
+  "build_metal_cost": 200,
+  "description": "Shotgun tank: good against bot, can damage multiple targets",
+  "display_name": "Splitter",
+  "events": {
+    "fired": {
+      "effect_spec": "/pa/effects/specs/fired_small.pfx muzzle00"
+    }
+  },
+  "mesh_bounds": [
+    6.6,
+    7,
+    3.8
+  ],
+  "model": {
+    "animtree": "/pa/anim/one_turret_no_pitch.json",
+    "filename": "/pa/units/land/Vsupport11/Vsupport11.papa"
+  },
+  "navigation": {
+    "group_preference": "front"
+  },
+  "physics": {
+    "radius": 4.5
+  },
+  "scrolling_uv": {
+    "scroll_rate": 0.7,
+    "uv_split": 0.86
+  },
+  "tools": [
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/Vsupport11/Vsupport11_shotgun.json"
+    },
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/Vsupport11/Vsupport11_shotgun.json"
+    },
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/Vsupport11/Vsupport11_shotgun.json"
+    },
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/Vsupport11/Vsupport11_shotgun.json"
+    },
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/Vsupport11/Vsupport11_shotgun.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Tank",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Custom1"
+  ]
+}

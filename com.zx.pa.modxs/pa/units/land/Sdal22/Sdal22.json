@@ -1,0 +1,58 @@
+{
+  "TEMP_texelinfo": 10.2184,
+  "area_build_separation": 18,
+  "atrophy_rate": 5,
+  "base_spec": "/pa/units/generic/strT.json",
+  "build_metal_cost": 500,
+  "command_caps": [
+    "ORDER_Attack"
+  ],
+  "description": "Basic turret: equipped with mortar anti-land, and anti-ship defenses.",
+  "display_name": "Mortar turret",
+  "events": {
+    "died": {
+      "effect_scale": 0.8
+    },
+    "fired": {
+      "effect_spec": "/pa/effects/specs/fired_medium.pfx socket_muzzle"
+    }
+  },
+  "guard_radius": 200,
+  "max_health": 500,
+  "mesh_bounds": [
+    5,
+    5.76558,
+    16.0541
+  ],
+  "model": [
+    {
+      "animtree": "/pa/anim/anim_trees/defense_turret_single_anim_tree.json",
+      "filename": "/pa/units/land/Sdal22/laser_defense_single.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_defense.json"
+    },
+    {
+      "animtree": "/pa/anim/anim_trees/defense_turret_single_anim_tree.json",
+      "filename": "/pa/units/land/Sdal22/floating_laser_single.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "tools": [
+    {
+      "aim_bone": "socket_aim",
+      "muzzle_bone": "socket_muzzle",
+      "spec_id": "/pa/units/land/Sdal22/Sdal22_shell.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Land",
+    "UNITTYPE_SurfaceDefense",
+    "UNITTYPE_Defense",
+    "UNITTYPE_Basic",
+    "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

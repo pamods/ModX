@@ -1,0 +1,5 @@
+{
+  "base_spec": "/pa/tools/missile/tx_missile_ae.json",
+  "max_range": 180,
+  "rate_of_fire": 1
+}

@@ -1,0 +1,5 @@
+{
+  "ammo_source": "infinite",
+  "base_spec": "/pa/tools/missile/tx_missile_aa.json",
+  "yaw_range": 30
+}

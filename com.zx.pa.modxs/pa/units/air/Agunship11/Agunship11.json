@@ -1,0 +1,106 @@
+{
+  "base_spec": "/pa/units/generic/airG.json",
+  "build_metal_cost": 500,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Attack",
+    "ORDER_Assist",
+    "ORDER_Use",
+    "ORDER_FireSecondaryWeapon"
+  ],
+  "description": "Gunship: equipped with anti-ground missiles and machine guns. No anti-air capabilities.",
+  "display_name": "Kestrel",
+  "events": {
+    "died": {
+      "effect_scale": 1.3
+    },
+    "fired": {
+      "effect_spec": "/pa/effects/specs/fired_small.pfx muzzle01 /pa/effects/specs/fired_small.pfx muzzle02"
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "turret00",
+      "filename": "/pa/effects/specs/jet_aircraftH.pfx",
+      "offset": [
+        0,
+        -1.25,
+        -1.062
+      ],
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "bone": "engines",
+      "filename": "/pa/effects/specs/jet_aircraftH.pfx",
+      "offset": [
+        2.2,
+        0,
+        -1.536
+      ],
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "bone": "engines",
+      "filename": "/pa/effects/specs/jet_aircraftH.pfx",
+      "offset": [
+        -2.2,
+        0,
+        -1.536
+      ],
+      "orientation": [
+        0,
+        90,
+        0
+      ],
+      "type": "moving"
+    }
+  ],
+  "max_health": 150,
+  "mesh_bounds": [
+    8,
+    11,
+    3
+  ],
+  "model": {
+    "animations": {
+      "fly": "/pa/units/air/Agunship11/gunship2_anim_fly.papa"
+    },
+    "animtree": "/pa/anim/one_turret_fly.json",
+    "filename": "/pa/units/air/Agunship11/gunship2.papa"
+  },
+  "physics": {
+    "push_class": 2,
+    "radius": 6
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": [
+        "muzzle01",
+        "muzzle02"
+      ],
+      "projectiles_per_fire": 2,
+      "spec_id": "/pa/units/air/Agunship11/Agunship11_bullet.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Gunship",
+    "UNITTYPE_Air",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Custom1"
+  ]
+}

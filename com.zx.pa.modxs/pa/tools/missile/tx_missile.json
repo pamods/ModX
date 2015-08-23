@@ -1,0 +1,10 @@
+{
+  "ammo_id": "/pa/ammo/missile/ax_missile.json",
+  "base_spec": "/pa/tools/missile/tx_missile_.json",
+  "target_priorities": [
+    "Mobile - Air",
+    "Mobile",
+    "Structure - Wall",
+    "Wall"
+  ]
+}

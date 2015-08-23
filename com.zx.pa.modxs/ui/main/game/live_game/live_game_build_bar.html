@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<noloc><title>Live Game: Build Bar</title></noloc>
+<link href="bundle://boot/boot.css" rel="stylesheet" type="text/css" />
+<link href="coui://ui/main/shared/js/thirdparty/jquery-ui-1.10.3.custom/css/alpha_theme/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
+<link href="coui://ui/main/shared/js/thirdparty/DataTables-1.9.4/media/css/jquery.dataTables.custom.css" rel="stylesheet" type="text/css" />
+<link href="live_game_build_bar2.css" rel="stylesheet" type="text/css" />
+<script src="bundle://boot/boot.js" type="text/javascript"></script>
+<script src="coui://ui/main/shared/js/build.js" type="text/javascript"></script>
+<script src="live_game_build_bar.js" type="text/javascript"></script>
+</head>
+    <body class="body_panel">
+        <body-dock data-bind="style: {width: bodyWidth}">
+            <div class="table_frame" data-bind="visible: showBuildBar">
+                <div class="table_scroll" id="the_table_scroll">
+                    <table class="table_body" data-bind="with: buildSet()">
+                        <tbody data-bind="foreach: raws()">
+                            <tr class="table_raw" data-bind="visible: isVisible, foreach: items()">
+                                <td class="table_column" data-bind="visible: Visible">
+                                    <div class="table_item">
+                                        <div class="div_build_item receiveMouse" data-bind="
+                                                    visible: Buildable,
+                                                    event: {
+                                                        mouseover: function () { model.setBuildHover($data.id) },
+                                                        mouseout: model.clearBuildHover,
+                                                        mousedown: function (data, event) { model.executeStartBuild(event, $data) }
+                                                    }, 
+                                                    css: { active: active },
+                                                    rollover_sound_exclusive: { sound: 'default', group: $index() }"
+                                            >
+                                            <span class="span_build_count stat_num" data-bind="text: count, visible: count"></span>
+                                            <span class="span_hotkey" data-bind="text: hotkey, visible: hotkey"></span>
+                                            <img class="table_item_image" data-bind="attr: { src: buildIcon }" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </body-dock>
+    </body>
+</html>

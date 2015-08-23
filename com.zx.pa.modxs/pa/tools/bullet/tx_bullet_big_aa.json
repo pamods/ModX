@@ -1,0 +1,13 @@
+{
+  "ammo_id": "/pa/ammo/bullet/ax_bullet_aa.json",
+  "base_spec": "/pa/tools/bullet/tx_bullet_big.json",
+  "target_layers": [
+    "WL_Air"
+  ],
+  "target_priorities": [
+    "Air & Bomber",
+    "Air & Gunship",
+    "Air & Transport",
+    "Air & Mobile"
+  ]
+}

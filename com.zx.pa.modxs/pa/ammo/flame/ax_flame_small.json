@@ -1,0 +1,9 @@
+{
+  "base_spec": "/pa/ammo/flame/ax_flame.json",
+  "burn_damage": 1,
+  "burn_radius": 15,
+  "damage": 10,
+  "full_damage_splash_radius": 10,
+  "splash_damage": 10,
+  "splash_radius": 15
+}

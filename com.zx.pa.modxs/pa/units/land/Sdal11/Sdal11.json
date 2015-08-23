@@ -1,0 +1,52 @@
+{
+  "TEMP_texelinfo": 10.2184,
+  "area_build_separation": 18,
+  "atrophy_rate": 5,
+  "base_spec": "/pa/units/generic/strT.json",
+  "build_metal_cost": 500,
+  "command_caps": [
+    "ORDER_Attack"
+  ],
+  "description": "Basic turret: equipped with direct fire anti-land, and anti-ship defenses.",
+  "display_name": "Laser Defense Tower",
+  "max_health": 700,
+  "mesh_bounds": [
+    6,
+    6,
+    17.2
+  ],
+  "model": [
+    {
+      "animtree": "/pa/anim/anim_trees/defense_turret_anim_tree.json",
+      "filename": "/pa/units/land/laser_defense/laser_defense.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_defense.json"
+    },
+    {
+      "animtree": "/pa/anim/anim_trees/defense_turret_anim_tree.json",
+      "filename": "/pa/units/sea/floating_laser/floating_laser.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "tools": [
+    {
+      "aim_bone": "bone_pitch",
+      "muzzle_bone": [
+        "socket_rightMuzzle",
+        "socket_leftMuzzle"
+      ],
+      "spec_id": "/pa/units/land/Sdal11/Sdal11_laser.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Land",
+    "UNITTYPE_SurfaceDefense",
+    "UNITTYPE_Defense",
+    "UNITTYPE_CmdBuild",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

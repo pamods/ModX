@@ -1,0 +1,47 @@
+{
+  "TEMP_texelinfo": 7,
+  "base_spec": "/pa/units/generic/airF.json",
+  "build_metal_cost": 500,
+  "description": "Fighter: equipped with machine gun.",
+  "display_name": "Thunderbird",
+  "fx_offsets": [
+    {
+      "bone": "engine01",
+      "filename": "/pa/effects/specs/jet_aircraft.pfx",
+      "type": "moving_forward"
+    },
+    {
+      "bone": "engine02",
+      "filename": "/pa/effects/specs/jet_aircraft.pfx",
+      "type": "moving_forward"
+    }
+  ],
+  "max_health": 100,
+  "mesh_bounds": [
+    8,
+    6.5,
+    2
+  ],
+  "model": {
+    "filename": "/pa/units/air/Afighter11/Afighter11.papa"
+  },
+  "physics": {
+    "radius": 5
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/air/Afighter11/Afighter11_bullet.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Fighter",
+    "UNITTYPE_Air",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Custom1"
+  ]
+}

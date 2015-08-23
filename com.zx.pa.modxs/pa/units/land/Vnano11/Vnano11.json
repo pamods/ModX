@@ -1,0 +1,75 @@
+{
+  "TEMP_texelinfo": 1,
+  "armor_type": "AT_Bot",
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "base_spec": "/pa/units/generic/vehL.json",
+  "build_metal_cost": 20,
+  "description": "Nanotank.",
+  "display_name": "Ant",
+  "mesh_bounds": [
+    1,
+    1.6,
+    0.8
+  ],
+  "model": {
+    "animtree": "/pa/anim/one_turret.json",
+    "filename": "/pa/units/land/Vnano11/Vnano11.papa"
+  },
+  "navigation": {
+    "acceleration": 80,
+    "brake": 80,
+    "move_speed": 8
+  },
+  "physics": {
+    "radius": 1
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 50,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 10,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 10,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "tools": [
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/Vnano11/Vnano11_bullet.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Tank",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Land",
+    "UNITTYPE_Offense",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_CannonBuildable",
+    "UNITTYPE_Custom3"
+  ]
+}

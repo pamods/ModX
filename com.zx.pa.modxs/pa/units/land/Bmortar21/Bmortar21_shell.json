@@ -1,0 +1,8 @@
+{
+  "base_spec": "/pa/tools/shell/tx_mortar.json",
+  "idle_aim_delay": 3,
+  "max_range": 160,
+  "pitch_range": 60,
+  "rate_of_fire": 1.2,
+  "yaw_range": 30
+}

@@ -1,0 +1,5 @@
+{
+  "ammo_id": "/pa/ammo/flame/ax_flame_small.json",
+  "base_spec": "/pa/tools/flame/tx_flame.json",
+  "max_range": 20
+}

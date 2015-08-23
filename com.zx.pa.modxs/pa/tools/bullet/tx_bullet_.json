@@ -1,0 +1,6 @@
+{
+  "base_spec": "/pa/tools/generic/tx_base.json",
+  "firing_standard_deviation": 1,
+  "pitch_rate": 720,
+  "yaw_rate": 720
+}

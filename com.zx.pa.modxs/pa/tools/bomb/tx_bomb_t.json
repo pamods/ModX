@@ -1,0 +1,17 @@
+{
+  "ammo_id": "/pa/ammo/bomb/ax_bomb_t.json",
+  "base_spec": "/pa/tools/bomb/tx_bomb.json",
+  "target_layers": [
+    "WL_LandHorizontal",
+    "WL_WaterSurface",
+    "WL_Underwater",
+    "WL_Seafloor"
+  ],
+  "target_priorities": [
+    "AirDefense - Air",
+    "Mobile & Naval",
+    "Mobile - Air - Naval",
+    "Structure - Wall",
+    "Wall"
+  ]
+}

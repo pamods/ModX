@@ -1,0 +1,163 @@
+{
+  "TEMP_texelinfo": 5,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        1,
+        2.7
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/veh/tank_light_laser_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/veh/tank_light_laser"
+    }
+  },
+  "base_spec": "/pa/units/generic/veh.json",
+  "build_metal_cost": 1000,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Assist"
+  ],
+  "consumption": {
+    "energy": 40
+  },
+  "description": "Mobile radar. Amphibious.",
+  "display_name": "Mobile radar",
+  "energy_efficiency_requirement": 0.9,
+  "fx_offsets": [
+    {
+      "bone": "antenna00",
+      "filename": "/pa/units/land/Vradar21/radar_on.pfx",
+      "offset": [
+        0,
+        0,
+        0.1
+      ],
+      "type": "energy"
+    }
+  ],
+  "headlights": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "far_distance": 25,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 1.4,
+      "near_distance": 1.4,
+      "near_height": 1.4,
+      "near_width": 1.8,
+      "offset": [
+        2.1,
+        -2.4,
+        1.35
+      ],
+      "orientation": [
+        0,
+        65,
+        0
+      ]
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "far_distance": 25,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 1.4,
+      "near_distance": 1.4,
+      "near_height": 1.4,
+      "near_width": 1.8,
+      "offset": [
+        -2.1,
+        -2.4,
+        1.35
+      ],
+      "orientation": [
+        0,
+        65,
+        0
+      ]
+    }
+  ],
+  "mesh_bounds": [
+    5.6,
+    5,
+    3
+  ],
+  "model": {
+    "animations": {
+      "end": "/pa/units/land/Vradar21/Vradar21_anim_end.papa",
+      "loop": "/pa/units/land/Vradar21/Vradar21_anim_loop.papa",
+      "start": "/pa/units/land/Vradar21/Vradar21_anim_start.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/powered_loop_anim_tree.json",
+    "filename": "/pa/units/land/Vradar21/Vradar21.papa"
+  },
+  "navigation": {
+    "group_preference": "back",
+    "type": "amphibious"
+  },
+  "physics": {
+    "radius": 4
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 120,
+          "shape": "capsule",
+          "uses_energy": false
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 24,
+          "shape": "capsule",
+          "uses_energy": false
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 24,
+          "shape": "capsule",
+          "uses_energy": false
+        },
+        {
+          "channel": "radar",
+          "layer": "surface_and_air",
+          "radius": 250,
+          "shape": "capsule",
+          "uses_energy": true
+        }
+      ]
+    }
+  },
+  "unit_types": [
+    "UNITTYPE_Tank",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Land",
+    "UNITTYPE_Scout",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_Custom2"
+  ]
+}

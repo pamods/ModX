@@ -1,0 +1,7 @@
+{
+  "ammo_source": "infinite",
+  "base_spec": "/pa/tools/modx/torpedo/tx_torpedo.json",
+  "firing_arc_yaw": 120,
+  "pitch_range": 0,
+  "yaw_range": 0
+}

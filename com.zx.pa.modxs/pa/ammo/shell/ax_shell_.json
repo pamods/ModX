@@ -1,0 +1,11 @@
+{
+  "base_spec": "/pa/ammo/generic/ax_base.json",
+  "burn_damage": 20,
+  "burn_duration": 1,
+  "burn_radius": 1,
+  "damage": 200,
+  "initial_velocity": 200,
+  "lifetime": 0.8,
+  "max_velocity": 200,
+  "splash_damage": 200
+}

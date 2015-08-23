@@ -1,0 +1,5 @@
+{
+  "ammo_id": "/pa/ammo/railgun/ax_railgun_orb.json",
+  "base_spec": "/pa/tools/railgun/tx_railgun_big.json",
+  "max_range": 180
+}

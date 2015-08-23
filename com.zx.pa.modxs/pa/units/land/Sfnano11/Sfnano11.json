@@ -1,0 +1,42 @@
+{
+  "TEMP_texelinfo": 15,
+  "base_spec": "/pa/units/generic/facN.json",
+  "buildable_types": "Tank & FactoryBuild & CannonBuildable",
+  "description": "Builds nanotanks. Autobuild on by default.",
+  "display_name": "Nanofactory",
+  "factory": {
+    "initial_build_spec": "/pa/units/land/Vnano11/Vnano11.json"
+  },
+  "mesh_bounds": [
+    9,
+    12,
+    6.5
+  ],
+  "model": [
+    {
+      "animations": {
+        "build_end": "/pa/units/land/Sfnano11/Sfnano11_anim_end.papa",
+        "build_loop": "/pa/units/land/Sfnano11/Sfnano11_anim_build.papa",
+        "build_start": "/pa/units/land/Sfnano11/Sfnano11_anim_start.papa"
+      },
+      "animtree": "/pa/anim/anim_trees/factory_anim_tree.json",
+      "filename": "/pa/units/land/Sfnano11/Sfnano11.papa",
+      "skirt_decal": "/pa/effects/specs/skirt_energy.json"
+    }
+  ],
+  "placement_size": [
+    10,
+    20
+  ],
+  "unit_types": [
+    "UNITTYPE_Important",
+    "UNITTYPE_Land",
+    "UNITTYPE_Tank",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Factory",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Custom1"
+  ]
+}

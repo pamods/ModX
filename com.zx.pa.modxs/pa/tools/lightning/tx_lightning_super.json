@@ -1,0 +1,17 @@
+{
+  "ammo_capacity": 20000,
+  "ammo_demand": 4000,
+  "ammo_id": "/pa/ammo/lightning/ax_lightning_super.json",
+  "ammo_per_shot": 20000,
+  "ammo_source": "energy",
+  "base_spec": "/pa/tools/generic/tx_base.json",
+  "max_range": 20,
+  "pitch_range": 180,
+  "rate_of_fire": 1,
+  "target_priorities": [
+    "Structure - Wall",
+    "Naval",
+    "Mobile - Air",
+    "Wall"
+  ]
+}

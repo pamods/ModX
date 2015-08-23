@@ -1,0 +1,90 @@
+{
+  "TEMP_texelinfo": 24.4307,
+  "area_build_type": "Sphere",
+  "atrophy_rate": 20,
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/metal"
+    }
+  },
+  "base_spec": "/pa/units/generic/strS.json",
+  "build_metal_cost": 2000,
+  "consumption": {
+    "energy": 0
+  },
+  "description": "Advanced manufacturing: produces metal, can only be placed on metal deposits.",
+  "display_name": "Advanced Metal Extractor",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/metal"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Factory",
+      "effect_scale": 1.5
+    }
+  },
+  "feature_requirements": [
+    "metal_spot"
+  ],
+  "lamps": [
+    {
+      "color": [
+        1,
+        0,
+        0
+      ],
+      "intensity": 1,
+      "offset": [
+        0,
+        -2.273,
+        8.746
+      ],
+      "radius": 5
+    }
+  ],
+  "max_health": 2000,
+  "mesh_bounds": [
+    15.5,
+    13.3685,
+    23.2
+  ],
+  "model": [
+    {
+      "animations": {
+        "idle": "/pa/units/land/metal_extractor_adv/metal_extractor_adv_anim_work.papa"
+      },
+      "animtree": "/pa/anim/anim_trees/constant_idle_anim_tree.json",
+      "filename": "/pa/units/land/metal_extractor_adv/metal_extractor_adv.papa",
+      "layer": "WL_LandHorizontal"
+    },
+    {
+      "animations": {
+        "idle": "/pa/units/sea/sea_metal_extractor_adv/sea_metal_extractor_adv_anim_work.papa"
+      },
+      "animtree": "/pa/anim/anim_trees/constant_idle_anim_tree.json",
+      "filename": "/pa/units/sea/sea_metal_extractor_adv/sea_metal_extractor_adv.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "placement_size": [
+    20,
+    16
+  ],
+  "production": {
+    "metal": 20
+  },
+  "replaceable_units": [
+    "/pa/units/land/SrmpA1/SrmpA1.json"
+  ],
+  "strategic_icon_priority": 5,
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Economy",
+    "UNITTYPE_MetalProduction",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

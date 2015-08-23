@@ -1,0 +1,6 @@
+{
+  "auto_attack": false,
+  "auto_task_type": "none",
+  "base_spec": "/pa/tools/uber/tx_uber.json",
+  "manual_fire": true
+}

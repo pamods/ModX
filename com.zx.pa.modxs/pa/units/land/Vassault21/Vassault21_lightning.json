@@ -1,0 +1,11 @@
+{
+  "ammo_id": [
+    {
+      "id": "/pa/ammo/lightning/ax_lightning.json",
+      "layer": "WL_LandHorizontal"
+    }
+  ],
+  "base_spec": "/pa/tools/lightning/tx_lightning.json",
+  "idle_aim_delay": 3,
+  "rate_of_fire": 0.25
+}

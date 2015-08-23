@@ -1,0 +1,14 @@
+{
+  "ammo_id": "/pa/ammo/lightning/ax_lightning_big.json",
+  "base_spec": "/pa/tools/generic/tx_base.json",
+  "max_range": 160,
+  "target_priorities": [
+    "Structure & (Defence | Offence) - Wall",
+    "Mobile & Tank - Heavy",
+    "Mobile & Bot - Heavy",
+    "Mobile & Naval - Heavy",
+    "Mobile & Heavy",
+    "Structure - Wall",
+    "Wall"
+  ]
+}

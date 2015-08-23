@@ -1,0 +1,140 @@
+{
+  "TEMP_texelinfo": 65,
+  "audio": {
+    "loops": {
+      "build": {
+        "cue": "/SE/Construction/Factory_contruction_loop_bot",
+        "flag": "build_target_changed",
+        "should_start_func": "has_build_target",
+        "should_stop_func": "no_build_target"
+      }
+    }
+  },
+  "base_spec": "/pa/units/generic/fac3.json",
+  "buildable_types": "Bot & FactoryBuild & Custom2",
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_FactoryBuild",
+    "ORDER_Reclaim",
+    "ORDER_Repair",
+    "ORDER_Attack",
+    "ORDER_Assist",
+    "ORDER_Use"
+  ],
+  "death": {
+    "decals": [
+      "/pa/effects/specs/scorch_c_01.json"
+    ]
+  },
+  "description": "Manufacturing: builds bots.",
+  "display_name": "Tech 3 bot factory",
+  "factory_cooldown_time": 3,
+  "fx_offsets": [
+    {
+      "bone": "armD01",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "orientation": [
+        0,
+        0,
+        90
+      ],
+      "type": "build"
+    },
+    {
+      "bone": "armD02",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "orientation": [
+        0,
+        0,
+        90
+      ],
+      "type": "build"
+    },
+    {
+      "bone": "armD03",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "orientation": [
+        0,
+        0,
+        90
+      ],
+      "type": "build"
+    },
+    {
+      "bone": "armD04",
+      "filename": "/pa/effects/specs/fab_spray.pfx",
+      "orientation": [
+        0,
+        0,
+        90
+      ],
+      "type": "build"
+    }
+  ],
+  "headlights": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "far_distance": 30,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 2,
+      "near_distance": 10,
+      "near_height": 20,
+      "near_width": 20,
+      "offset": [
+        0,
+        0,
+        20
+      ]
+    }
+  ],
+  "mesh_bounds": [
+    50,
+    50,
+    23
+  ],
+  "model": {
+    "animations": {
+      "build_end": "/pa/units/land/Bfac23/Bfac23_anim_end.papa",
+      "build_loop": "/pa/units/land/Bfac23/Bfac23_anim_build.papa",
+      "build_start": "/pa/units/land/Bfac23/Bfac23_anim_start.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/factory_anim_tree.json",
+    "filename": "/pa/units/land/Bfac23/Bfac23.papa",
+    "skirt_decal": "/pa/effects/specs/skirt_bfac23.json"
+  },
+  "placement_size": [
+    50,
+    65
+  ],
+  "rolloff_dirs": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      -1,
+      0
+    ]
+  ],
+  "spawn_layers": "WL_LandHorizontal",
+  "unit_types": [
+    "UNITTYPE_Important",
+    "UNITTYPE_Factory",
+    "UNITTYPE_Construction",
+    "UNITTYPE_Land",
+    "UNITTYPE_Bot",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom2"
+  ],
+  "wait_to_rolloff_time": 0
+}

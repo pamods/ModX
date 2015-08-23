@@ -1,0 +1,99 @@
+{
+  "TEMP_texelinfo": 5,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        6.5
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/bot/assault_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/assault"
+    }
+  },
+  "base_spec": "/pa/units/generic/botA.json",
+  "build_metal_cost": 200,
+  "description": "Mortar bot: effective agains dense groups of units.",
+  "display_name": "Grenadier",
+  "events": {
+    "fired": {
+      "effect_spec": "/pa/effects/specs/fired_medium.pfx muzzle00"
+    }
+  },
+  "guard_radius": 180,
+  "mesh_bounds": [
+    3.2,
+    3,
+    6.5
+  ],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/land/Baa21/botbase1_anim_idle.papa",
+      "still": "/pa/units/land/Baa21/botbase1_anim_still.papa",
+      "walk": "/pa/units/land/Baa21/botbase1_anim_walk.papa"
+    },
+    "animtree": "/pa/units/land/Bmortar21/Bmortar21_at.json",
+    "filename": "/pa/units/land/Bmortar21/Bmortar22.papa",
+    "walk_speed": 3
+  },
+  "navigation": {
+    "acceleration": 150,
+    "brake": 150,
+    "move_speed": 15
+  },
+  "nearby_target_tick_update_interval": 5,
+  "physics": {
+    "radius": 2.5
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 120,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "mine",
+          "radius": 24,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 24,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "tools": [
+    {
+      "aim_bone": "pitch00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/Bmortar21/Bmortar21_shell.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Custom2"
+  ]
+}

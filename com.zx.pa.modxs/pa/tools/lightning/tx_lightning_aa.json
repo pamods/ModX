@@ -1,0 +1,11 @@
+{
+  "base_spec": "/pa/tools/lightning/tx_lightning.json",
+  "target_layers": [
+    "WL_Air"
+  ],
+  "target_priorities": [
+    "Air & Bomber",
+    "Air & Gunship",
+    "Air & Mobile"
+  ]
+}

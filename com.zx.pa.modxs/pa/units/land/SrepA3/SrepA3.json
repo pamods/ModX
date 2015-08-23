@@ -1,0 +1,283 @@
+{
+  "TEMP_texelinfo": 32.6108,
+  "atrophy_rate": 100,
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/energy"
+    }
+  },
+  "base_spec": "/pa/units/generic/strS.json",
+  "build_metal_cost": 10000,
+  "description": "Advanced manufacturing: produces energy.",
+  "display_name": "Advanced Energy Plant",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/energy"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Factory",
+      "effect_scale": 1.5,
+      "effect_spec": "/pa/effects/specs/exp_size3.pfx"
+    }
+  },
+  "fx_offsets": [
+    {
+      "filename": "/pa/units/land/energy_plant_adv/energy_plant_adv_idle.pfx",
+      "offset": [
+        0,
+        0,
+        6.7
+      ],
+      "type": "idle"
+    }
+  ],
+  "headlights": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "far_distance": 25,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 1,
+      "near_distance": 2,
+      "near_height": 4.4,
+      "near_width": 4.4,
+      "offset": [
+        7.25,
+        7.25,
+        8
+      ],
+      "orientation": [
+        35.25,
+        -30,
+        125.25
+      ]
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "far_distance": 25,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 1,
+      "near_distance": 2,
+      "near_height": 4.4,
+      "near_width": 4.4,
+      "offset": [
+        7.25,
+        -7.25,
+        8
+      ],
+      "orientation": [
+        35.25,
+        30,
+        54.75
+      ]
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "far_distance": 25,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 1,
+      "near_distance": 2,
+      "near_height": 4.4,
+      "near_width": 4.4,
+      "offset": [
+        -7.25,
+        -7.25,
+        8
+      ],
+      "orientation": [
+        -35.25,
+        30,
+        -54.75
+      ]
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "far_distance": 25,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 1,
+      "near_distance": 2,
+      "near_height": 4.4,
+      "near_width": 4.4,
+      "offset": [
+        -7.25,
+        7.25,
+        8
+      ],
+      "orientation": [
+        -35.25,
+        -30,
+        -125.25
+      ]
+    }
+  ],
+  "lamps": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 2,
+      "offset": [
+        7.25,
+        7.25,
+        8
+      ],
+      "radius": 3
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 2,
+      "offset": [
+        7.25,
+        -7.25,
+        8
+      ],
+      "radius": 3
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 2,
+      "offset": [
+        -7.25,
+        -7.25,
+        8
+      ],
+      "radius": 3
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 2,
+      "offset": [
+        -7.25,
+        7.25,
+        8
+      ],
+      "radius": 3
+    },
+    {
+      "bone": "bone_rotor02",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 1,
+      "offset": [
+        0,
+        -4.15,
+        2.3
+      ],
+      "radius": 4.5
+    },
+    {
+      "bone": "bone_rotor02",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 1,
+      "offset": [
+        -3.59,
+        2.08,
+        2.3
+      ],
+      "radius": 4.5
+    },
+    {
+      "bone": "bone_rotor02",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "intensity": 1,
+      "offset": [
+        3.59,
+        2.08,
+        2.3
+      ],
+      "radius": 4.5
+    },
+    {
+      "color": [
+        1,
+        0,
+        0
+      ],
+      "intensity": 2,
+      "offset": [
+        0,
+        7.43,
+        22.97
+      ],
+      "radius": 4
+    }
+  ],
+  "max_health": 5000,
+  "mesh_bounds": [
+    20,
+    20,
+    23.5
+  ],
+  "model": [
+    {
+      "animations": {
+        "idle": "/pa/units/land/energy_plant_adv/energy_plant_adv_anim_work.papa"
+      },
+      "animtree": "/pa/anim/anim_trees/constant_idle_anim_tree.json",
+      "filename": "/pa/units/land/energy_plant_adv/energy_plant_adv.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_energy_adv.json"
+    },
+    {
+      "animations": {
+        "idle": "/pa/units/land/energy_plant_adv/energy_plant_adv_anim_work.papa"
+      },
+      "animtree": "/pa/anim/anim_trees/constant_idle_anim_tree.json",
+      "filename": "/pa/units/sea/sea_energy_plant_adv/sea_energy_plant_adv.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "production": {
+    "energy": 10000
+  },
+  "unit_types": [
+    "UNITTYPE_Economy",
+    "UNITTYPE_Structure",
+    "UNITTYPE_EnergyProduction",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Basic",
+    "UNITTYPE_CombatFabAdvBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

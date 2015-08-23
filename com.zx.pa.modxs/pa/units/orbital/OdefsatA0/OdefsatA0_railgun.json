@@ -1,0 +1,8 @@
+{
+  "base_spec": "/pa/tools/railgun/tx_railgun_orb.json",
+  "idle_aim_delay": 3,
+  "pitch_range": 180,
+  "pitch_rate": 30,
+  "yaw_range": 180,
+  "yaw_rate": 30
+}

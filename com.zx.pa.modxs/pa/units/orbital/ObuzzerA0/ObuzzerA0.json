@@ -1,0 +1,81 @@
+{
+  "TEMP_texelinfo": 20,
+  "base_spec": "/pa/units/generic/orbM.json",
+  "build_metal_cost": 200,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Attack",
+    "ORDER_Assist"
+  ],
+  "description": "Orbital hunter drone: fast moving orbital vehicle for attacking unarmed targets.",
+  "display_name": "Buzzer",
+  "events": {
+    "fired": {
+      "effect_spec": "/pa/effects/specs/fired_lightning.pfx muzzle00"
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "engine00",
+      "filename": "/pa/effects/specs/jet_aircraftNT.pfx",
+      "type": "moving"
+    },
+    {
+      "bone": "engine00",
+      "filename": "/pa/effects/specs/jet_aircraftDot.pfx",
+      "type": "idle"
+    }
+  ],
+  "gravwell_velocity_multiplier": 20,
+  "guard_radius": 150,
+  "max_health": 200,
+  "mesh_bounds": [
+    5.5,
+    11.4,
+    5.5
+  ],
+  "model": {
+    "animations": {
+      "deploy": "/pa/units/orbital/ObuzzerA0/buzzer_anim_deploy.papa",
+      "open": "/pa/units/orbital/ObuzzerA0/buzzer_anim_open.papa"
+    },
+    "animtree": "/pa/units/orbital/ObuzzerA0/ObuzzerA0_at.json",
+    "filename": "/pa/units/orbital/ObuzzerA0/buzzer.papa"
+  },
+  "navigation": {
+    "acceleration": 10,
+    "aggressive_distance": 20,
+    "bank_factor": 1,
+    "brake": 30,
+    "circle_max_time": 0,
+    "circle_min_time": 0,
+    "hover_time": -1,
+    "move_speed": 60,
+    "turn_speed": 30
+  },
+  "physics": {
+    "gravity_scalar": 0.001,
+    "push_class": 15,
+    "radius": 5
+  },
+  "spawn_layers": "WL_Orbital",
+  "system_velocity_multiplier": 20,
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/orbital/ObuzzerA0/ObuzzerA0_lightning.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Orbital",
+    "UNITTYPE_Bomber",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_CombatFabAdvBuild"
+  ]
+}

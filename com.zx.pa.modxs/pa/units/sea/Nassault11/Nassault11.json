@@ -1,0 +1,76 @@
+{
+  "TEMP_texelinfo": 5,
+  "base_spec": "/pa/units/generic/navL.json",
+  "build_metal_cost": 200,
+  "description": "Assault boat: armed with two dual machine guns.",
+  "display_name": "Tempest",
+  "fx_offsets": [
+    {
+      "filename": "/pa/effects/specs/jet_navalL_back.pfx",
+      "offset": [
+        1.5,
+        4.3,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "filename": "/pa/effects/specs/jet_navalL_back.pfx",
+      "offset": [
+        -1.5,
+        4.3,
+        0
+      ],
+      "type": "moving"
+    },
+    {
+      "filename": "/pa/effects/specs/jet_navalL_front.pfx",
+      "offset": [
+        0,
+        -4.4,
+        0
+      ],
+      "type": "moving"
+    }
+  ],
+  "mesh_bounds": [
+    3.2,
+    8.8,
+    3.4
+  ],
+  "model": {
+    "animtree": "/pa/units/sea/Nassault11/Nassault11_at.json",
+    "filename": "/pa/units/sea/Nassault11/Nassault11.papa"
+  },
+  "physics": {
+    "radius": 3
+  },
+  "spawn_layers": "WL_WaterSurface",
+  "tools": [
+    {
+      "aim_bone": "pitch01",
+      "muzzle_bone": [
+        "muzzle01a",
+        "muzzle01b"
+      ],
+      "spec_id": "/pa/units/sea/Nassault11/Nassault11_bullet.json"
+    },
+    {
+      "aim_bone": "pitch02",
+      "muzzle_bone": [
+        "muzzle02a",
+        "muzzle02b"
+      ],
+      "spec_id": "/pa/units/sea/Nassault11/Nassault11_bullet.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Naval",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Custom1",
+    "UNITTYPE_Custom2"
+  ]
+}

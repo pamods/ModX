@@ -1,0 +1,12 @@
+{
+  "ammo_id": "/pa/ammo/ion/ax_ion_super.json",
+  "base_spec": "/pa/tools/generic/tx_base.json",
+  "max_range": 360,
+  "target_layers": [
+    "WL_Orbital"
+  ],
+  "target_priorities": [
+    "Orbital & Heavy",
+    "Orbital"
+  ]
+}
