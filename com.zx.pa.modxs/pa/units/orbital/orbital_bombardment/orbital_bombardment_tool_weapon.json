@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/laser/tx_laser.json","ammo_id":"/pa/ammo/modx/laser/ax_laser_aoa.json","rate_of_fire":2,"firing_standard_deviation":0.5,"max_range":180,"yaw_rate":30,"pitch_rate":30,"yaw_range":180,"idle_aim_delay":3}

@@ -1,7 +1,1 @@
-{
-  "base_spec": "/pa/units/generic/veh_.json",
-  "max_health": 200,
-  "physics": {
-    "push_class": 5
-  }
-}
+{"base_spec":"/pa/units/generic/veh_.json","max_health":100,"physics":{"push_class":5},"navigation":{"type":"land-small","acceleration":120,"brake":120,"move_speed":12,"turn_speed":180},"recon":{"observer":{"items":[{"layer":"surface_and_air","channel":"sight","shape":"capsule","radius":120},{"layer":"mine","channel":"sight","shape":"capsule","radius":120},{"layer":"underwater","channel":"sight","shape":"capsule","radius":24}]}}}

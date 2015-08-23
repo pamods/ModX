@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/generic/tx_base.json","ammo_id":"/pa/ammo/modx/flame/ax_lightning_big.json","pitch_range":180,"target_priorities":["Structure - Wall","Naval","Mobile - Air","Wall"],"max_range":20,"rate_of_fire":1,"ammo_source":"energy","ammo_capacity":20000,"ammo_demand":4000,"ammo_per_shot":20000}

@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/generic/tx_base.json","ammo_id":"/pa/ammo/modx/flame/ax_lightning.json","rate_of_fire":0.5,"max_range":50,"yaw_rate":3600,"pitch_rate":3600,"yaw_range":60,"pitch_range":60,"firing_arc_yaw":15,"firing_arc_pitch":15,"target_layers":["WL_Orbital"],"target_priorities":["Mobile & Orbital","Structure & Orbital"]}

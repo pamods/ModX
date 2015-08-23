@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/missile/tx_missile.json","ammo_id":"/pa/ammo/modx/missile/ax_missile_aa.json","target_layers":["WL_Air"],"target_priorities":["Air & Bomber","Air & Gunship","Air & Mobile"]}

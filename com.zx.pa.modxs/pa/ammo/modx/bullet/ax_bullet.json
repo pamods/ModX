@@ -1,0 +1,1 @@
+{"base_spec":"/pa/ammo/modx/generic/ax_bullet_.json","fx_trail":{"filename":"/pa/effects/specs/proj_bullet_small.pfx"},"events":{"died":{"audio_cue":"/SE/Impacts/shell_bullet","effect_spec":"/pa/effects/specs/exp_bullet_small.pfx"},"spawned":{"audio_cue":"/SE/Weapons/bot/assault_fire"}},"damage":5,"lifetime":0.7,"armor_damage_map":{"AT_Structure":0.5,"AT_Naval":0.5}}

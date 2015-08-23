@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/missile/tx_missile.json","ammo_id":"/pa/ammo/modx/missile/ax_tactical.json","rate_of_fire":0.2,"max_range":400,"yaw_range":0,"pitch_range":0,"firing_arc_yaw":180,"firing_arc_pitch":180,"target_priorities":["Mobile - Air","Structure - Wall","Wall"],"ammo_capacity":10000,"ammo_demand":1000,"ammo_per_shot":10000}

@@ -1,9 +1,0 @@
-{
-  "base_spec": "/pa/tools/ion/tx_ion_super.json",
-  "firing_arc_pitch": 30,
-  "firing_arc_yaw": 30,
-  "pitch_range": 0,
-  "pitch_rate": 0,
-  "yaw_range": 0,
-  "yaw_rate": 0
-}

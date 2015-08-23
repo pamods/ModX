@@ -1,0 +1,1 @@
+{"base_spec":"/pa/ammo/modx/generic/ax_laser_.json","events":{"died":{"audio_cue":"/SE/Impacts/laser_blast","effect_spec":"/pa/effects/specs/exp_laser_big.pfx"},"spawned":{"audio_cue":"/SE/Weapons/orb/orb_ssx_laser_fire"}},"damage":1000,"initial_velocity":1000,"max_velocity":1000,"burn_damage":50,"lifetime":0.8,"fx_trail":{"filename":"/pa/effects/specs/proj_laser_ion.pfx"}}

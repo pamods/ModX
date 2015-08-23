@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/artillery/tx_artillery_big.json","ammo_id":"/pa/ammo/modx/artillery/ax_plasmaart.json","target_layers":["WL_LandHorizontal","WL_WaterSurface"],"ammo_demand":2000,"max_range":600,"target_priorities":["Mobile - Air","Structure - Wall","Wall"]}

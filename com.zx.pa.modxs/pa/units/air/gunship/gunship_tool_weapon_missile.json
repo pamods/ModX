@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/missile/tx_missile.json","max_range":180,"ammo_capacity":1000,"ammo_demand":100,"yaw_range":60,"pitch_range":120,"yaw_rate":360,"pitch_rate":360,"auto_attack":false,"manual_fire":true,"auto_task_type":"none"}

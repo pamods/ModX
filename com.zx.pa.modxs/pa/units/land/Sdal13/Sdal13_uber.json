@@ -1,6 +1,0 @@
-{
-  "ammo_demand": 2500,
-  "base_spec": "/pa/tools/uber/tx_uber.json",
-  "max_range": 180,
-  "rate_of_fire": 0.25
-}

@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/laser/tx_laser.json","ammo_id":"/pa/ammo/modx/laser/ax_laser_plasma.json","max_range":180,"target_layers":["WL_LandHorizontal","WL_WaterSurface"],"target_priorities":["Mobile & Bot","Mobile & Tank","Mobile & Naval","Structure - Wall","Wall"]}

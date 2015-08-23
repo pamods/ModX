@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/missile/tx_missile.json","ammo_id":"/pa/ammo/modx/missile/ax_missile.json","max_range":180,"yaw_range":0,"pitch_range":0,"firing_arc_yaw":30,"firing_arc_pitch":60,"spread_fire":false,"carpet_fire":true,"target_priorities":["AirDefense - Air","Mobile - Air - Naval","Mobile & Naval","Structure - Wall","Wall"]}

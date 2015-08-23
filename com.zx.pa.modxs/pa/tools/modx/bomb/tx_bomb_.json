@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/generic/tx_base.json","ammo_source":"energy","ammo_capacity":500,"ammo_demand":50,"ammo_per_shot":500,"max_range":10,"firing_arc_yaw":180,"firing_arc_pitch":180,"carpet_fire":true,"firing_standard_deviation":5}

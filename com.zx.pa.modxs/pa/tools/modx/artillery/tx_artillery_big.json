@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/artillery/tx_artillery.json","ammo_id":"/pa/ammo/modx/artillery/ax_artillery_big.json","rate_of_fire":0.1,"ammo_capacity":20000,"ammo_demand":1000,"ammo_per_shot":20000,"max_range":800,"arc_type":"ARC_High","firing_standard_deviation":3,"target_priorities":["Structure - Wall","Mobile - Air","Wall"]}

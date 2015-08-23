@@ -1,6 +1,1 @@
-{
-  "auto_attack": false,
-  "auto_task_type": "none",
-  "base_spec": "/pa/tools/uber/tx_uber.json",
-  "manual_fire": true
-}
+{"base_spec":"/pa/tools/modx/uber/tx_uber.json","auto_attack":false,"manual_fire":true,"auto_task_type":"none"}

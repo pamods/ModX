@@ -1,0 +1,1 @@
+{"base_spec":"/pa/units/sea/base_ship/base_ship.json","armor_type":"AT_Naval","spawn_layers":"WL_WaterSurface","guard_layer":"WL_AnySurface","guard_radius":150,"physics":{"shape":"sphere"},"events":{"build_complete":{"audio_cue":"/SE/Build_Complete/sea"}},"fired":{"audio_cue":"","effect_spec":""},"died":{"audio_cue":"/SE/Death/Sea"}}

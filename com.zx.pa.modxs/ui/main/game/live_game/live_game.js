@@ -40,9 +40,11 @@ $(document).ready(function () {
     var annilaseredPlanetSet = ko.observable({}).extend({ local: 'annilasered_planet_set' });
     var annilaseredPlanetUnderEnemyControlSet = ko.observable({}).extend({ local: 'annilasered_planet_under_enemy_control_set' });
     var clearStatsSets = function () {
-        smashedPlanetSet({});
-        annilaseredPlanetSet({});
-        annilaseredPlanetUnderEnemyControlSet({});
+        var set = {};
+        smashedPlanetSet(set);
+        annilaseredPlanetSet(set);
+        annilaseredPlanetUnderEnemyControlSet(set);
+
         lastSuperWeaponTime(0);
     };
     endOfTime.subscribe(function (value) {
@@ -72,7 +74,7 @@ $(document).ready(function () {
             api.tally.incStatInt('lasers_activated_toward_activated_planets');
     });
 
-    function CelestialViewModel(object, previous) {
+    function CelestialViewModel(object) {
         var self = this;
 
         self.isSun = ko.observable(!!object.isSun);
@@ -93,9 +95,7 @@ $(document).ready(function () {
         self.collisionImminent = ko.observable(object.collision_imminent);
         self.weapon_control = ko.observable(object.weapon_control);
         self.weaponFiring = ko.observable(object.weapon_firing);
-
-        // the opponent loses control of the planet at the exact same time as the laser fires, so we have to look at the previous value
-        self.targetActiveUnderEnemyControl = ko.observable(object.weapon_firing ? previous.targetActiveUnderEnemyControl() : object.target_under_enemy_control);
+        self.targetActiveUnderEnemyControl = ko.observable(object.target_under_enemy_control);
         self.target_index = ko.observable(object.target_index);
 
         self.selfGuided = ko.observable(object.self_guided);
@@ -108,12 +108,11 @@ $(document).ready(function () {
 
             var interlock = function (observable) {
                 var set = observable();
-                if (set[key])
-                    return;
-
-                set[key] = true;
-                observable(set);
-                changed = true;
+                if (!set[key]) {
+                    set[key] = true;
+                    observable(set);
+                    changed = true;
+                }
             }
 
             if (self.weapon_control() && self.weaponFiring())
@@ -131,7 +130,7 @@ $(document).ready(function () {
 
         if (self.weapon_control() && model.planetIndexToWeaponControlMap[self.index()] !== 'friendly') {
             model.planetIndexToWeaponControlMap[self.index()] = 'friendly';
-            if (!model.squelchNotifications()) {
+            if (!model.squelchNotifications())
                 model.doCustomAlert({
                     name: 'Weapon control established',
                     special_weapon: true,
@@ -142,72 +141,49 @@ $(document).ready(function () {
                 .then(function () {
                     model.celestialControlModel.firePlanetWeapon(self.index())
                 }); // you may fire when ready
-                eventSystem.processEvent(constants.event_type.weapon_control_established);
-            }
+            eventSystem.processEvent(constants.event_type.weapon_control_established);
         }
         else if (!self.weapon_control()) {
             var lost_control = model.planetIndexToWeaponControlMap[self.index()] === 'friendly';
             if (lost_control) {
-                if (!model.squelchNotifications())
-                    model.doCustomAlert({
-                        name: 'Weapon control lost',
-                        special_weapon: true,
-                        lazer: true,
-                        lost: true,
-                        index: self.index()
-                    });
+                model.doCustomAlert({
+                    name: 'Weapon control lost',
+                    special_weapon: true,
+                    lazer: true,
+                    lost: true,
+                    index: self.index()
+                })
             }
             model.planetIndexToWeaponControlMap[self.index()] = 'none';
         }
 
         if (self.thrust_control() && model.planetIndexToThrustControlMap[self.index()] !== 'friendly') {
             model.planetIndexToThrustControlMap[self.index()] = 'friendly';
-            if (!model.squelchNotifications()) {
+            if (!model.squelchNotifications())
                 model.doCustomAlert({
-                    name: 'Thrust control established',
-                    special_weapon: true,
-                    thrust: true,
-                    index: self.index(),
-                    name: self.name()
-                })
-                .then(function () {
-                    model.celestialControlModel.smashPlanet(self.index())
-                });
-                eventSystem.processEvent(constants.event_type.thrust_control_established);
-            }
+                        name: 'Thrust control established',
+                        special_weapon: true,
+                        thrust: true,
+                        index: self.index(),
+                        name: self.name()
+                    })
+                    .then(function () {
+                        model.celestialControlModel.smashPlanet(self.index())
+                    });
+            eventSystem.processEvent(constants.event_type.thrust_control_established);
         }
         else if (!self.thrust_control()) {
             var lost_control = model.planetIndexToThrustControlMap[self.index()] === 'friendly';
             if (lost_control) {
-                if (!model.squelchNotifications())
-                    model.doCustomAlert({
-                        name: 'Thrust control lost',
-                        special_weapon: true,
-                        thrust: true,
-                        lost: true,
-                        index: self.index()
-                    });
+                model.doCustomAlert({
+                    name: 'Thrust control lost',
+                    special_weapon: true,
+                    thrust: true,
+                    lost: true,
+                    index: self.index()
+                });
             }
             model.planetIndexToThrustControlMap[self.index()] = 'none';
-        }
-
-        if (!self.dead() && previous && previous.dead()) {
-            if (!model.squelchNotifications()) {
-                model.doCustomAlert({
-                    name: 'New asteroid detected orbiting the system',
-                    special_weapon: false,
-                    thrust: false,
-                    lost: false,
-                    index: self.index()
-                }).then(function () {
-                    if (model.celestialControlModel.notActive()) {
-                        api.camera.focusPlanet(self.index());
-                        model.selectedCelestialIndex(self.index());
-                        api.camera.setZoom("orbital", false);
-                    }
-                });
-                eventSystem.processEvent(constants.event_type.asteroid_respawned);
-            }
         }
 
         self.status = ko.observable((self.thrust_control()) ? "READY" : "");
@@ -273,17 +249,16 @@ $(document).ready(function () {
                         console.log('movement_detected');
                         _.delay(function () {
                             eventSystem.processEvent(constants.event_type.asteroid_incoming);
-                            if (!model.squelchNotifications())
-                                model.doCustomAlert({
-                                    name: 'Celestial movement detected'
-                                }).then(function () {
-                                    if (model.celestialControlModel.notActive()) {
-                                        api.camera.focusPlanet(self.index());
-                                        model.selectedCelestialIndex(self.index());
-                                        api.camera.setZoom("orbital", false);
-                                    }
-                                });
-                        }, self.thrust_control() ? 10 * 1000 : 0); // why is there a delay based on thrust control?
+                            model.doCustomAlert({
+                                name: 'Celestial movement detected'
+                            }).then(function () {
+                                if (model.celestialControlModel.notActive()) {
+                                    api.camera.focusPlanet(self.index());
+                                    model.selectedCelestialIndex(self.index());
+                                    api.camera.setZoom("orbital", false);
+                                }
+                            });
+                        }, self.thrust_control() ? 10 * 1000 : 0);
                         break;
 
                     case 'self_guided':
@@ -306,7 +281,7 @@ $(document).ready(function () {
     function CelestialControlModel() {
         var self = this;
 
-        self.actionsList = ['do_nothing', 'change_orbit', 'smash_planet', 'fire_weapon'];
+        self.actionsList = ['do_nothing', 'change_orbit', 'smash_planet'];
         self.actionIndex = ko.observable(0);
         self.actionIsChangeOrbit = ko.computed(function () { return self.actionIndex() === 1; });
         self.actionIsSmashPlanet = ko.computed(function () { return self.actionIndex() === 2; });
@@ -390,6 +365,7 @@ $(document).ready(function () {
 
         self.hasSurfaceTarget = ko.observable(false);
         self.requireConfirmation = ko.observable(false);
+        self.requireSurfaceTarget = ko.computed(function () { return self.actionIndex() == 2; });
 
         self.hasSurfaceTarget.subscribe(function (value) {
             if (value)
@@ -403,7 +379,17 @@ $(document).ready(function () {
             api.ar_system.changePlanetSelectionState(value, 'target');
 
             if (value !== -1) {
-                self.executeCelestialAction();
+                if (self.requireSurfaceTarget()) {
+
+                    api.camera.focusPlanet(value);
+                    api.camera.setZoom('orbital', false);
+
+                    api.ar_system.changeSkyboxOverlayColor(1.0, 0.0, 0.0, 0.2);
+                    engine.call("holodeck.startRequestInterplanetaryTarget", self.sourcePlanetIndex());
+                }
+                else {
+                    self.executeCelestialAction();
+                }
             }
             else {
                 api.ar_system.changeSkyboxOverlayColor(0.0, 0.0, 0.0, 0.0);
@@ -465,7 +451,6 @@ $(document).ready(function () {
             self.actionIndex(2);
             self.sourcePlanetIndex(index);
             api.camera.setZoom('celestial', false);
-            audioModel.triggerCelestialTargetingMusic();
         };
 
         self.movePlanet = function (index) {
@@ -484,7 +469,6 @@ $(document).ready(function () {
             self.actionIndex(3);
             self.sourcePlanetIndex(index);
             api.camera.setZoom('celestial');
-            audioModel.triggerCelestialTargetingMusic();
         };
 
         self.cancelFire = function (index) {
@@ -515,7 +499,8 @@ $(document).ready(function () {
                     engine.call('planet.movePlanet', self.sourcePlanetIndex(), self.targetPlanetIndex(), 10000.0);
                     break;
                 case 2:
-                    engine.call('planet.attackPlanet', self.sourcePlanetIndex(), self.targetPlanetIndex()).then( function(success) {
+                    engine.call("holodeck.endRequestInterplanetaryTarget");
+                    engine.call('planet.attackPlanet', self.sourcePlanetIndex(), Number(0), Number(0), Number(0)).then( function(success) {
                         if (success)
                         {
                             api.audio.playSound('/SE/UI/UI_Annihilate');
@@ -644,6 +629,10 @@ $(document).ready(function () {
                 return false;
 
             return self.paused() || self.restart();
+        });
+        self.showPause.subscribe(function (value) {
+            if (!value)
+                api.Panel.message('game_paused_panel', 'hide', {});
         });
 
         self.ranked = ko.observable(false);
@@ -1040,16 +1029,6 @@ $(document).ready(function () {
             self.observerModeCalledOnce(true);
         }
 
-        self.canSave = ko.pureComputed(function() {
-            var serverCanSave = (self.serverMode() === 'playing');
-            return (self.singleHumanPlayer() || self.gameOptions.sandbox()) && serverCanSave;
-        });
-        self.firstCanSaveTime = ko.observable();
-        self.canSave.subscribe(function() {
-            if (self.canSave() && (self.firstCanSaveTime() === undefined))
-                self.firstCanSaveTime(endOfTime());
-        });
-
         /*  Time  */
         self.showTimeControls = ko.observable(false).extend({ session: 'show_time_controls' });
         self.showTimeControls.subscribe(function (value) {
@@ -1069,8 +1048,7 @@ $(document).ready(function () {
 
             return {
                 visible: self.showTimeControls(),
-                showPlayFromHere: require && !prevent,
-                firstPlayFromHereTime: self.firstCanSaveTime()
+                showPlayFromHere: require && !prevent
             };
         });
         self.timeBarState.subscribe(function() {
@@ -1412,7 +1390,7 @@ $(document).ready(function () {
         }.bind(self));
 
         self.screenWidth = function() {
-            return window.screen.availWidth / (api.settings.getSynchronous('ui', 'ui_scale') || 1.0);
+            return window.screen.availWidth;
         }
         self.ScreenWidth = function() {
             api.Panel.message('build_bar', 'screen_width', self.screenWidth());
@@ -1726,7 +1704,14 @@ $(document).ready(function () {
             if (self.showTimeControls() || self.reviewMode() || self.celestialControlModel.active() || self.isSpectator())
                 return false;
 
+            // Ping is always available, and is currently part of the commands.
+            // If that changes, the code below should be used instead.
             return true;
+
+//            if (self.hasSelection() && !self.showLanding())
+//                return true
+//
+//            return false;
         });
 
         self.showActionBar = ko.computed(function() {
@@ -1856,7 +1841,7 @@ $(document).ready(function () {
 
             var ccm = self.celestialControlModel;
 
-            if (ccm.targetPlanetIndex() !== -1) {
+            if (ccm.targetPlanetIndex() !== -1 && ccm.requireSurfaceTarget()) {
                 api.camera.setAllowZoom(false);
                 api.camera.setAllowPan(true);
                 api.camera.setAllowRoll(true);
@@ -2026,12 +2011,14 @@ $(document).ready(function () {
             self.popUp({
                 buttons : [
                     loc('!LOC:Quit to Main Menu'),
+                    loc('!LOC:Quit to Desktop'),
                     loc('!LOC(live_game:cancel.message):Cancel')
                 ],
                 message: 'Quit Game'
             }).then(function (result) {
                 switch (result) {
                     case 0: self.navToMainMenu(); break;
+                    case 1: self.exitGame(); break;
                     case 2: /* do nothing */ break;
                 }
             });
@@ -2113,7 +2100,7 @@ $(document).ready(function () {
                 });
             }
 
-            if (self.canSave()) {
+            if (self.singleHumanPlayer() || self.gameOptions.sandbox()) {
                 list.push({
                     label: 'Save Game',
                     action: 'menuSave'
@@ -2218,7 +2205,7 @@ $(document).ready(function () {
 
             engine.call('watchlist.setCreationAlertTypes', JSON.stringify(['Factory', 'Recon', 'Important']), JSON.stringify([]));
             engine.call('watchlist.setIdleAlertTypes', JSON.stringify([/*'Factory'*/]), JSON.stringify([])); /* disabled until the alert ui can be cleaned up. */
-            engine.call('watchlist.setArrivalAlertTypes', JSON.stringify(['Commander', 'Transport']), JSON.stringify([]));
+            engine.call('watchlist.setArrivalAlertTypes', JSON.stringify(['Commander']), JSON.stringify([]));
             engine.call('watchlist.setDamageAlertTypes', JSON.stringify(['Commander']), JSON.stringify([]));
             engine.call('watchlist.setDeathAlertTypes', JSON.stringify(['Factory', 'Commander', 'Recon', 'Important']), JSON.stringify(['Wall']));
             engine.call('watchlist.setSightAlertTypes', JSON.stringify(['Factory', 'Commander', 'Recon', 'Important']), JSON.stringify(['Wall']));
@@ -2550,25 +2537,9 @@ $(document).ready(function () {
                 api.audio.playSound("/SE/UI/UI_Unit_UnSelect");
         };
 
-        var scaleMouseEvent = function (mdevent) {
-            if (mdevent.uiScaled)
-                return;
-
-            mdevent.uiScaled = true;
-
-            var scale = api.settings.getSynchronous('ui', 'ui_scale') || 1.0;
-
-            mdevent.offsetX = Math.floor(mdevent.offsetX * scale);
-            mdevent.offsetY = Math.floor(mdevent.offsetY * scale);
-            mdevent.clientX = Math.floor(mdevent.clientX * scale);
-            mdevent.clientY = Math.floor(mdevent.clientY * scale);
-        };
-
         var holodeckModeMouseDown = {};
 
         holodeckModeMouseDown.fab = function (holodeck, mdevent) {
-            scaleMouseEvent(mdevent);
-
             if (mdevent.button === 0) {
                 var queue = mdevent.shiftKey;
                 model.fabCount(model.fabCount() + 1);
@@ -2590,7 +2561,6 @@ $(document).ready(function () {
                 holodeck.unitBeginFab(beginFabX, beginFabY, beginSnap);
                 self.mode('fab_rotate');
                 input.capture(holodeck.div, function (event) {
-                    scaleMouseEvent(event);
                     if ((event.type === 'mouseup') && (event.button === 0)) {
                         var snap = !event.ctrlKey;
                         holodeck.unitEndFab(event.offsetX, event.offsetY, queue, snap).then(function (success) {
@@ -2633,14 +2603,12 @@ $(document).ready(function () {
         };
 
         holodeckModeMouseDown['default'] = function (holodeck, mdevent) {
-            scaleMouseEvent(mdevent);
             if (mdevent.button === 0) {
                 if (model.celestialControlActive()) {
                     if (model.celestialControlModel.findingTargetPlanet()) {
                         model.celestialControlModel.mousedown(mdevent);
 
                         input.capture($('body'), function (event) {
-                            scaleMouseEvent(event);
                             if (event.type === 'mouseup' && event.button === 0) {
                                 model.celestialControlModel.mouseup(event);
                                 input.release();
@@ -2670,7 +2638,6 @@ $(document).ready(function () {
                     holodeck.doubleClickTime = now + 250;
                     delete holodeck.doubleClickId;
                     input.capture(holodeck.div, function (event) {
-                        scaleMouseEvent(event);
                         if (!dragging && (event.type === 'mousemove')) {
                             dragging = true;
                             holodeck.beginDragSelect(startx, starty);
@@ -2727,7 +2694,6 @@ $(document).ready(function () {
                 var queue = mdevent.shiftKey;
 
                 input.capture(holodeck.div, function (event) {
-                    scaleMouseEvent(event);
                     var eventTime = new Date().getTime();
                     if (self.showTimeControls())
                         self.endCommandMode();
@@ -2748,7 +2714,6 @@ $(document).ready(function () {
                                     return;
 
                                 input.capture(holodeck.div, function (event) {
-                                    scaleMouseEvent(event);
                                     if ((event.type === 'mousedown') && (event.button === 2)) {
                                         input.release();
                                         holodeck.unitEndCommand(dragCommand, event.offsetX, event.offsetY, queue).then(function (success) {
@@ -2802,7 +2767,6 @@ $(document).ready(function () {
         var holodeckCommandMouseDown = function (command, targetable) {
 
             return function (holodeck, mdevent) {
-                scaleMouseEvent(mdevent);
                 if (mdevent.button === 0) {
                     engine.call('camera.cameraMaybeSetFocusPlanet');
                     var startx = mdevent.offsetX;
@@ -2825,7 +2789,6 @@ $(document).ready(function () {
                     }
 
                     input.capture(holodeck.div, function (event) {
-                        scaleMouseEvent(event);
                         var playSound = function (success) {
                             holodeck.showCommandConfirmation(success ? command : "", event.offsetX, event.offsetY);
                             if (!success || (command === 'move')) {
@@ -2855,7 +2818,6 @@ $(document).ready(function () {
                                         return;
                                     // move and unload have extra input for their area command so recapture for it
                                     input.capture(holodeck.div, function (event) {
-                                        scaleMouseEvent(event);
                                         if ((event.type === 'mousedown') && (event.button === 0)) {
                                             input.release();
                                             holodeck.unitEndCommand(command, event.offsetX, event.offsetY, queue).then(playSound);
@@ -2914,8 +2876,6 @@ $(document).ready(function () {
             if (mdevent.target.nodeName !== 'HOLODECK')
                 return;
 
-            scaleMouseEvent(mdevent);
-
             var holodeck = api.Holodeck.get(this);
 
             var handler = holodeckModeMouseDown[self.mode()];
@@ -2931,7 +2891,6 @@ $(document).ready(function () {
                 self.mode('camera');
                 holodeck.beginControlCamera();
                 input.capture(holodeck.div, function (event) {
-                    scaleMouseEvent(event);
                     var mouseDone = ((event.type === 'mouseup') && (mdevent.button === 1));
                     var escKey = ((event.type === 'keydown') && (event.keyCode === keyboard.esc));
                     if (mouseDone || escKey) {
@@ -3079,6 +3038,7 @@ $(document).ready(function () {
             api.panels.sandbox && api.panels.sandbox.message('state', state);
         });
 
+        // Next two used to be sandbox only, but now supporting pause
         self.pauseSim = function () { self.send_message('control_sim', { paused: true  }); };
         self.playSim = function () { self.send_message('control_sim', { paused: false }); };
         self.togglePause = function () {
@@ -3158,7 +3118,6 @@ $(document).ready(function () {
 
                 model.showGameComplete();
                 model.gameOver(true);
-                api.game.showUI();
 
                 break;
             }
@@ -3449,11 +3408,10 @@ $(document).ready(function () {
             model.startingPlanetBiome(payload.planets[0].biome);
 
         if (payload.planets && payload.planets.length) {
-            var previous = _.clone(model.celestialViewModels());
             model.celestialViewModels.removeAll();
 
-            _.forEach(payload.planets, function (element, index) {
-                model.celestialViewModels.push(new CelestialViewModel(element, previous[index]));
+            _.forEach(payload.planets, function (element) {
+                model.celestialViewModels.push(new CelestialViewModel(element));
             });
 
             model.celestialViewModels.push(new CelestialViewModel({ isSun: true, index: payload.planets.length }));
@@ -3491,11 +3449,7 @@ $(document).ready(function () {
     }
 
     handlers.sim_terminated = function (payload) {
-        if (model.isLocalGame())
-            model.transitPrimaryMessage(loc('!LOC:WORLD SIMULATION WENT AWAY'));
-        else
-            model.transitPrimaryMessage(loc('!LOC(live_game:connection_to_server_lost.message):CONNECTION TO SERVER LOST'));
-
+        model.transitPrimaryMessage(loc('!LOC(live_game:connection_to_server_lost.message):CONNECTION TO SERVER LOST'));
         model.transitSecondaryMessage(loc('!LOC(live_game:returning_to_main_menu.message):Returning to Main Menu'));
         model.transitDestination('coui://ui/main/game/start/start.html');
         model.transitDelay(5000);
@@ -3506,10 +3460,7 @@ $(document).ready(function () {
         if (model.userTriggeredDisconnect())
             return;
 
-        if (model.isLocalGame())
-            model.transitPrimaryMessage(loc('!LOC:WORLD SIMULATION WENT AWAY'));
-        else
-            model.transitPrimaryMessage(loc('!LOC(live_game:connection_to_server_lost.message):CONNECTION TO SERVER LOST'));
+        model.transitPrimaryMessage(loc('!LOC(live_game:connection_to_server_lost.message):CONNECTION TO SERVER LOST'));
         model.transitSecondaryMessage(loc('!LOC(live_game:returning_to_main_menu.message):Returning to Main Menu'));
         model.transitDestination('coui://ui/main/game/start/start.html');
         model.transitDelay(5000);

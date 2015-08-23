@@ -1,4 +1,1 @@
-{
-  "ammo_id": "/pa/ammo/shell/ax_shell_com.json",
-  "base_spec": "/pa/units/commanders/base_commander/base_commander_tool_weapon_main.json"
-}
+{"base_spec":"/pa/units/commanders/base_commander/base_commander_tool_weapon_main.json"}

@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/laser/tx_laser_adv.json","ammo_id":"/pa/ammo/modx/laser/ax_laser_adv_ao.json","rate_of_fire":1,"max_range":240,"target_layers":["WL_Orbital"],"target_priorities":["Orbital & LaserPlatform","Orbital & Transport","Orbital & OrbitalDefense","Orbital"]}

@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/pd/tx_pd.json","ammo_id":"/pa/ammo/modx/pd/ax_pd_range.json","rate_of_fire":2,"max_range":100,"ammo_source":"infinite","anti_entity_targets":["/pa/ammo/modx/missile/ax_missile.json","/pa/ammo/modx/missile/ax_missile_t.json"]}

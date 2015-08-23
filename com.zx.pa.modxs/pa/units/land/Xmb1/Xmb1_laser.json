@@ -1,7 +1,0 @@
-{
-  "base_spec": "/pa/tools/laser/tx_laser.json",
-  "idle_aim_delay": 5,
-  "max_range": 160,
-  "pitch_range": 60,
-  "rate_of_fire": 5
-}

@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/bullet/tx_bullet_big.json","ammo_id":"/pa/ammo/modx/bullet/ax_bullet_big_aa.json","target_layers":["WL_Air"],"rate_of_fire":10,"target_priorities":["Air & Bomber","Air & Gunship","Air & Transport","Air & Mobile"]}

@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/missile/tx_missile.json","ammo_id":"/pa/ammo/modx/missile/ax_missile_ae.json","target_layers":["WL_Air"],"rate_of_fire":2,"manual_fire":true,"auto_task_type":"anti_entity","ammo_source":"infinite"}

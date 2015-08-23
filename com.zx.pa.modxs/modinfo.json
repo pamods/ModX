@@ -1,18 +1,21 @@
 {
-  "author": "ZX0",
-  "build": "85138",
+  "enabled" : true,
+  "context" : "server",
+  "identifier" : "com.zx.pa.modxs",
+  "display_name" : "ModX server side",
+  "description" : "new units and stuff",
+  "author" : "ZX0",
+  "version" : "58",
+  "build" : "83074",
+  "date": "2015/06/17",
+  "forum" : "https://forums.uberent.com/threads/60372/",
   "category": [
-    "units",
-    "server-mod"
+      "units",
+      "server-mod"
   ],
-  "context": "server",
-  "date": "2015/08/11",
-  "description": "new units and stuff",
-  "display_name": "ModX server side",
-  "enabled": true,
-  "forum": "https://forums.uberent.com/threads/60372/",
-  "icon": "https://i.imgur.com/jjoyQ4s.png",
-  "identifier": "com.zx.pa.modxs",
-  "signature": "(not yet implemented)",
-  "version": "64"
+  "icon": "https://i.imgur.com/ukprG2K.png",
+  "signature" : "(not yet implemented)",
+  "dependencies": [
+    "com.zx.pa.modxc"
+  ]
 }

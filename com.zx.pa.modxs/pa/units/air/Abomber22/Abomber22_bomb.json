@@ -1,6 +1,0 @@
-{
-  "ammo_capacity": 2500,
-  "ammo_demand": 250,
-  "base_spec": "/pa/tools/bomb/tx_bomb_t.json",
-  "rate_of_fire": 5
-}

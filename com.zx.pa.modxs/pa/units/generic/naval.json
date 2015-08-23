@@ -1,0 +1,1 @@
+{"base_spec":"/pa/units/generic/naval_.json","guard_radius":150,"physics":{"push_class":10},"navigation":{"type":"deepwater","acceleration":4,"brake":4,"move_speed":8,"turn_speed":30,"park_stamp_type":"box","park_stamp_cost":30},"events":{"died":{"audio_cue":"/SE/Death/Sea_large","effect_spec":"/pa/effects/specs/exp_size3.pfx"}}}

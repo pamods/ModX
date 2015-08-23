@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/torpedo/tx_torpedo.json","ammo_id":[{"layer":"WL_Seafloor","id":"/pa/ammo/modx/torpedo/ax_torpedo.json"}],"rate_of_fire":0.5,"pitch_range":0,"firing_arc_yaw":30,"firing_arc_pitch":30,"ammo_source":"infinite"}

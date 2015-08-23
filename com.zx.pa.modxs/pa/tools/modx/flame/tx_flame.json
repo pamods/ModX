@@ -1,0 +1,1 @@
+{"base_spec":"/pa/tools/modx/generic/tx_base.json","ammo_id":"/pa/ammo/modx/flame/ax_flame.json","rate_of_fire":10,"idle_aim_delay":3,"max_range":20,"target_priorities":["Mobile - Air","Structure - Wall","Naval","Wall"]}

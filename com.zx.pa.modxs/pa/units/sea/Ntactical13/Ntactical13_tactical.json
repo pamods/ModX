@@ -1,5 +1,0 @@
-{
-  "ammo_capacity": 80000,
-  "ammo_demand": 1000,
-  "base_spec": "/pa/tools/missile/tx_tactical.json"
-}
